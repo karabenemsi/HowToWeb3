@@ -1,0 +1,77 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 1.05;
+    word-wrap: break-word;
+    letter-spacing: -1px;
+    font-size: 2.8rem;
+}
+
+h2 {
+    line-height: 1.14;
+    font-size: 1.6rem;
+}
+
+h3 {
+    line-height: 1.38;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.big,
+h4 {
+    font-size: 1.1rem;
+    line-height: 1.38;
+}
+
+.small,
+small {
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 0.9em 0;
+    line-height: 1.5;
+}
+
+em {
+    font-style: italic;
+}
+
+strong,
+.bold {
+    font-weight: bold;
+}
+
+blockquote {
+    display: block;
+    padding: 0 0 0 2.5em;
+    margin: 0;
+    position: relative;
+}
+
+blockquote::before {
+    content: "\201C";
+    position: absolute;
+    font-family: Georgia, serif;
+    line-height: 1.2;
+    font-size: 4rem;
+    left: 0.1em;
+    top: 0;
+}
