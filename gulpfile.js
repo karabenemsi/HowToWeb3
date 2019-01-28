@@ -1,175 +1,238 @@
-var gulp = require("gulp"),
-  fs = require("fs"),
-  sass = require("gulp-sass"),
-  concat = require('gulp-concat'),
-  concatCss = require('gulp-concat-css'),
-  minifyCss = require('gulp-clean-css'),
-  uglify = require('gulp-uglify'),
-  rename = require('gulp-rename'),
-  cssBase64 = require('gulp-css-base64'),
-  connect = require('gulp-connect'),
-  pug = require('gulp-pug'),
-  autoprefixer = require('gulp-autoprefixer');
+const { task, dest, watch, src, series, parallel } = require('gulp');
+const del = require('del');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const concatCss = require('gulp-concat-css');
+const minifyCss = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const pug = require('gulp-pug');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const merge = require('merge-stream');
+const browserSync = require('browser-sync');
+const headerComment = require('gulp-header-comment');
+const gulpif = require('gulp-if');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const ts = require('gulp-typescript');
+const tsProject = ts.createProject('tsconfig.json');
+const tsify = require('tsify');
+const browserify = require('browserify');
+const babelify = require('babelify');
 
-var npmPath = 'node_modules/';
+const server = browserSync.create();
 
-var sassBundles = [{
-  sassFiles: [
-    npmPath + 'normalize.css/normalize.css',
-    'scss/global.scss',
-  ],
-  outputFile: 'main.css',
-  outputFolder: '_public/css'
-}];
-var watchSassFiles = ['scss/**/*.scss'].concat(sassBundles.map(bundle => bundle.sassFiles));
+const options = {
+  npmPath: 'node_modules/',
+  externalSeverRoot: '/web/app',
+  devServerRoot: 'dist',
+  headerText: `Build: <%= moment().format('YYYYMMDD') %>-<%= Math.random().toString(36).toUpperCase().substr(2, 10) %>-<%= moment().format('hhmmss') %>
+                Version: <%= pkg.version %>
+                Copyright (c) <%= moment().format('YYYY') %> Florian Lubitz
+                Licensed under MIT License`,
+};
 
-var jsBundles = [{
-    jsFiles: [
-      npmPath + 'jquery/dist/jquery.js',
-      // npmPath + 'gsap/TweenLite.js',
-      // npmPath + 'gsap/CSSPlugin.js',
-      // npmPath + 'gsap/EasePack.js',
-      // npmPath + 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
-      // npmPath + 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
-      // npmPath + 'flowplayer/dist/flowplayer.js',
-      // npmPath + 'bxslider/dist/jquery.bxslider.js'
-    ],
-    outputFile: 'vendor.js',
-    outputFolder: '_public/js'
-  },
+let externalSeverRoot = '../restserver/web/app';
+
+let sassBundles = [
   {
-    jsFiles: [
-      'js/**/*.js',
+    sassFiles: [
+      options.npmPath + 'normalize.css/normalize.css',
+      'scss/global.scss',
     ],
-    outputFile: 'site.js',
-    outputFolder: '_public/js'
-  }
+    outputFile: 'main.css',
+    outputFolder: options.devServerRoot + '/css',
+  },
 ];
-var watchJSFiles = ['js/**/*.js'].concat(jsBundles.map(bundle => bundle.jsFiles));
+let watchSassFiles = ['scss/**/*.scss'];
 
-var pugBundles = [{
-  pugFiles: [
-    'pug/*.pug',
-    'pug/sites/**/*.pug',
-  ],
-  outputFile: 'index.html',
-  outputFolder: '_public/'
-}];
-var watchPugFiles = ['pug/**/*.pug'].concat(pugBundles.map(bundle => bundle.pugFiles));
+let watchJSFiles = ['js/**/*.ts'];
 
-var fontBundles = [{
-  fontFiles: [
-    'fonts/*',
-    npmPath + 'mdi/fonts/*',
-    // npmPath + 'flowplayer/dist/skin/icons/*',
-  ]
-}];
+let pugBundles = [
+  {
+    pugFiles: ['pug/sites/**/*.pug'],
+    outputFile: 'index.html',
+    outputFolder: options.devServerRoot + '/',
+  },
+];
+let watchPugFiles = ['pug/**/*.pug'];
 
-gulp.task('connect', function () {
-  connect.server({
-    root: '_public',
-    livereload: true,
+let fontsBundle = {
+  fontFiles: ['fonts/*', npmPath + 'mdi/fonts/*'],
+};
+
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function serve(done) {
+  server.init({
+    server: {
+      baseDir: options.devServerRoot,
+    },
   });
-});
+  done();
+}
 
-gulp.task('livereload', function () {
-  gulp.src('./_public/**/*')
-    .pipe(connect.reload());
-});
+function clean() {
+  return del([options.devServerRoot]);
+}
 
-gulp.task('watch', function () {
-  gulp.watch(watchSassFiles, ['sass'])
-    .on('change', function (event) {
-      console.log('[SASS-Watcher] Datei ' + event.path + ' hat sich geändert. Typ der Änderung: ' + event.type);
-    });
-  gulp.watch(watchJSFiles, ['js'])
-    .on('change', function (event) {
-      console.log('[JS-Watcher] Datei ' + event.path + ' hat sich geändert. Typ der Änderung: ' + event.type);
-    });
-  gulp.watch(watchPugFiles, ['pug'])
-    .on('change', function (event) {
-      console.log('[pug-Watcher] Datei ' + event.path + ' hat sich geändert. Typ der Änderung: ' + event.type);
-    });
-  gulp.watch('./_public/**/*', ['livereload']);
-});
-
-gulp.task("sass", function () {
-  sassBundles.forEach(function (bundle) {
-    console.log('Compiliere und Optimiere SASS-Dateien für Bundle ' + bundle.outputFile);
-    checkAndLogIfBundleFilesDoesntExist(bundle.sassFiles);
-
-    return gulp.src(bundle.sassFiles)
+function scss() {
+  let bundles = [];
+  sassBundles.forEach(function(bundle, index) {
+    bundles[index] = src(bundle.sassFiles)
       .pipe(sass().on('error', sass.logError))
-      .pipe(concatCss(bundle.outputFile))
-      // Base64 is super slow. Use only if necessary 
-      // .pipe(cssBase64()) 
+      .pipe(
+        gulpif(
+          !getProd(),
+          replace({
+            global: options.configReplaceLocal,
+          })
+        )
+      )
+      .pipe(
+        gulpif(
+          getProd(),
+          replace({
+            global: options.configReplaceCMS,
+          })
+        )
+      )
+      .pipe(
+        concatCss(bundle.outputFile, {
+          rebaseUrls: false,
+        })
+      )
+      // Base64 is super slow. Use only if necessary
+      // .pipe(cssBase64())
       .pipe(autoprefixer())
-      .pipe(gulp.dest(bundle.outputFolder))
-      .pipe(minifyCss()) 
-      .pipe(rename({ extname: '.min.css' })) 
-      .pipe(gulp.dest(bundle.outputFolder)); 
+      .pipe(headerComment(options.headerText))
+      .pipe(dest(bundle.outputFolder))
+      .pipe(sourcemaps.init())
+      .pipe(minifyCss())
+      .pipe(
+        rename({
+          extname: '.min.css',
+        })
+      )
+      .pipe(headerComment(options.headerText))
+      .pipe(sourcemaps.write(''))
+      .pipe(dest(bundle.outputFolder));
   });
+  return merge(bundles);
+}
+
+function js() {
+  return browserify({
+    entries: ['./js/main.ts'],
+    debug: true,
+    cache: {},
+    packageCache: {},
+    // transform: [
+    //   babelify.configure({
+    //     presets: ['@babel/preset-env'],
+    //   }),
+    // ],
+  })
+    .plugin(tsify)
+    .bundle()
+    .on('error', function(error) {
+      console.error(error.message);
+      this.emit('end');
+    })
+    .pipe(source('main.js'))
+    .pipe(buffer())
+    .pipe(headerComment(options.headerText))
+    .pipe(dest(options.devServerRoot + '/js'))
+    .pipe(
+      rename({
+        extname: '.min.js',
+      })
+    )
+    .pipe(
+      sourcemaps.init({
+        loadMaps: true,
+      })
+    )
+    .pipe(uglify())
+    .pipe(headerComment(options.headerText))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(options.devServerRoot + '/js'))
+    .pipe(server.stream());
+}
+
+function pugBuild() {
+  let bundles = [];
+  pugBundles.forEach(function(bundle, index) {
+    bundles[index] = src(bundle.pugFiles)
+      .pipe(
+        pug({
+          pretty: true,
+        }).on('error', function(err) {
+          console.error(err.message);
+          this.emit('end');
+        })
+      )
+      .pipe(dest(bundle.outputFolder));
+  });
+
+  return merge(bundles);
+}
+
+function favicon() {
+  return src('images/favicon/*').pipe(dest(options.devServerRoot + '/'));
+}
+
+const images = parallel(favicon, function copyImages() {
+  return src('images/**/*').pipe(dest(options.devServerRoot + '/images/'));
 });
 
-gulp.task("js", function () {
-  jsBundles.forEach(function (bundle) {
-    // console.log('Optimiere JS-Dateien für Bundle ' + bundle.outputFile); 
-    checkAndLogIfBundleFilesDoesntExist(bundle.jsFiles);
+function fonts() {
+  return src(fontsBundle.fontFiles).pipe(
+    dest(options.devServerRoot + '/fonts/')
+  );
+}
 
-    return gulp.src(bundle.jsFiles)
-      .pipe(concat(bundle.outputFile))
-      .pipe(gulp.dest(bundle.outputFolder))
-      .pipe(uglify())
-      .pipe(rename({
-        extname: '.min.js'
-      }))
-      .pipe(gulp.dest(bundle.outputFolder));
-  });
-});
+const watcher = parallel(
+  function watcherPug() {
+    return watch(watchPugFiles, series(pugBuild, reload));
+  },
+  function watcherScss() {
+    return watch(watchSassFiles, series(scss, reload));
+  },
+  function watcherJS() {
+    return watch(watchJSFiles, series(js, reload));
+  }
+);
 
-gulp.task("pug", function () {
-  pugBundles.forEach(function (bundle) {
-    // console.log('Optimiere pug-Dateien für Bundle ' + bundle.outputFile); 
-    checkAndLogIfBundleFilesDoesntExist(bundle.pugFiles);
+const build = series(clean, parallel(scss, js, pugBuild, images, fonts));
 
-    return gulp.src(bundle.pugFiles)
-      .pipe(pug({
-        pretty: true
-      }).on('error', console.log))
-      .pipe(gulp.dest(bundle.outputFolder));
-  });
-});
+// const dev = series(build, serve, reload);
+const dev = series(build, serve, watcher, reload);
 
-gulp.task('images', function () {
-  return gulp.src('images/**/*')
-    .pipe(gulp.dest('_public/images/'));
-});
+task(
+  'publish',
+  series(build, function publishToServer() {
+    return src(options.devServerRoot + '/**/*').pipe(dest(externalSeverRoot));
+  })
+);
 
-gulp.task('fonts', function () {
-  fontBundles.forEach(function (bundle) {
-    return gulp.src(bundle.fontFiles)
-      .pipe(gulp.dest('_public/fonts/'));
-  });
-});
+function errorHandler(error) {
+  console.log(error.message);
+}
 
-gulp.task('default', ['connect', 'watch', 'sass', 'js', 'pug']);
+exports.default = dev;
 
-gulp.task('build', ['sass', 'js', 'pug', 'images', 'fonts']);
-
-/** 
- * Prüft, ob alle Eingangsdateien eines Bundles existieren. Falls nicht, wird eine Fehlermeldung mit den betroffenen Dateien ausgegeben. Wildcard-Filter wie * oder ** werden ignoriert. 
- * @param {any} filePaths Auflistung von Pfaden für die Quelldateien 
- */
-function checkAndLogIfBundleFilesDoesntExist(filePaths) {
-  filePaths.forEach(file => {
-    if (file.indexOf('*') === -1) {
-      fs.stat(file, function (err, stat) {
-        if (err !== null) {
-          console.error(file + ': Datei existiert nicht! Fehlercode ' + err.code);
-        }
-      });
-    } else {
-      // console.log(file + ': Pfad enthält Wildcard-Filter, die ungeprüft übernommen werden.'); 
-    }
-  });
+function getProd() {
+  var option,
+    i = process.argv.indexOf('--prod');
+  if (i > -1) {
+    option = process.argv[i] == '--prod';
+  } else {
+    option = false;
+  }
+  return option;
 }
