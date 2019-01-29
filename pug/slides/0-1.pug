@@ -1,0 +1,31 @@
+extends ../layout/l_chapter.pug
+
+block meta
+  -
+    meta.nextSlide='./index.html';
+    meta.prevSlide='./index.html';
+    meta.title='Git';
+    meta.subtitle='Quellcodeverwaltung';
+    meta.slideId='0-1';
+    
+block topspace
+  img(src="./images/0/git_logo.png", alt="Git Logo")#s-0-1-git-logo
+  
+block main
+  //- .date=meta.date.toLocaleDateString()
+  h1 git
+      //- span presents
+  h2 Quellcodeverwaltung
+
+
+
+block script
+  script.
+    var nextSlide = './0-1.html'
+    $('main').click(function(){
+      $(this).addClass('slide');
+      setTimeout(function(){
+        location.href=nextSlide;
+      }, 500);
+      
+    })

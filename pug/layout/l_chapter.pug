@@ -12,21 +12,14 @@ html(lang="de")
     meta(name="title", content=meta.title)
     meta(name="subtitle", content=meta.subtitle)
     title=meta.title
-  body.l_main(class="slide-"+meta.slideId)
+  body.l_chapter(class="slide-"+meta.slideId)
 
-    header
-      .date=meta.date.toLocaleDateString('de-DE')
-      .author=meta.author
-      h1.title=meta.title
-      block header
+    block topspace
 
-    main
-      block main
-
-
-    footer
-      .build=new Date().getMonth()
-
+    main#js-chapter
+      .content
+        block main
+      
     //- Script
     script(src="./js/vendor.min.js")
     script(src="./js/main.min.js")

@@ -26,7 +26,7 @@ const server = browserSync.create();
 const options = {
   npmPath: 'node_modules/',
   externalSeverRoot: '/web/app',
-  devServerRoot: 'dist',
+  devServerRoot: 'docs',
   headerText: `Build: <%= moment().format('YYYYMMDD') %>-<%= Math.random().toString(36).toUpperCase().substr(2, 10) %>-<%= moment().format('hhmmss') %>
                 Version: <%= pkg.version %>
                 Copyright (c) <%= moment().format('YYYY') %> Florian Lubitz
@@ -47,11 +47,17 @@ let sassBundles = [
 ];
 let watchSassFiles = ['scss/**/*.scss'];
 
-let watchJSFiles = ['js/**/*.ts'];
+let watchTSFiles = ['js/**/*.ts'];
+
+let jsVendorBundle = {
+  jsFiles: [options.npmPath + '/jquery/dist/jquery.js'],
+  outputFile: 'vendor.js',
+  outputFolder: options.devServerRoot + '/js',
+};
 
 let pugBundles = [
   {
-    pugFiles: ['pug/sites/**/*.pug'],
+    pugFiles: ['pug/slides/**/*.pug'],
     outputFile: 'index.html',
     outputFolder: options.devServerRoot + '/',
   },
@@ -59,7 +65,7 @@ let pugBundles = [
 let watchPugFiles = ['pug/**/*.pug'];
 
 let fontsBundle = {
-  fontFiles: ['fonts/*', npmPath + 'mdi/fonts/*'],
+  fontFiles: ['fonts/*', options.npmPath + 'mdi/fonts/*'],
 };
 
 function reload(done) {
@@ -85,22 +91,7 @@ function scss() {
   sassBundles.forEach(function(bundle, index) {
     bundles[index] = src(bundle.sassFiles)
       .pipe(sass().on('error', sass.logError))
-      .pipe(
-        gulpif(
-          !getProd(),
-          replace({
-            global: options.configReplaceLocal,
-          })
-        )
-      )
-      .pipe(
-        gulpif(
-          getProd(),
-          replace({
-            global: options.configReplaceCMS,
-          })
-        )
-      )
+
       .pipe(
         concatCss(bundle.outputFile, {
           rebaseUrls: false,
@@ -123,6 +114,19 @@ function scss() {
       .pipe(dest(bundle.outputFolder));
   });
   return merge(bundles);
+}
+
+function vendorJs() {
+    return src(jsVendorBundle.jsFiles)
+      .pipe(concat(jsVendorBundle.outputFile))
+      .pipe(dest(jsVendorBundle.outputFolder))
+      .pipe(uglify())
+      .pipe(
+        rename({
+          extname: '.min.js',
+        })
+      )
+      .pipe(dest(jsVendorBundle.outputFolder));
 }
 
 function js() {
@@ -204,11 +208,11 @@ const watcher = parallel(
     return watch(watchSassFiles, series(scss, reload));
   },
   function watcherJS() {
-    return watch(watchJSFiles, series(js, reload));
+    return watch(watchTSFiles, series(js, reload));
   }
 );
 
-const build = series(clean, parallel(scss, js, pugBuild, images, fonts));
+const build = series(clean, parallel(scss,vendorJs, js, pugBuild, images, fonts));
 
 // const dev = series(build, serve, reload);
 const dev = series(build, serve, watcher, reload);

@@ -1,0 +1,27 @@
+extends ../layout/l_index.pug
+
+block meta
+  -
+    meta.nextSlide='./index.html';
+    meta.prevSlide='./index.html';
+    meta.title='HowToWeb 3.0';
+    meta.subtitle='HTML und CSS';
+    
+block main
+  //- .date=meta.date.toLocaleDateString()
+  h1 HowToWeb 3.0
+    .author=meta.author
+      //- span presents
+  h2 HTML und CSS
+
+
+block script
+  script.
+    var nextSlide = './0-1.html'
+    $('main').click(function(){
+      $(this).addClass('slide');
+      setTimeout(function(){
+        location.href=nextSlide;
+      }, 500);
+      
+    })

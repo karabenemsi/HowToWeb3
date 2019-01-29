@@ -26,6 +26,12 @@
 @import 'basics/main';
 
 
-// @import 'layout/'
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/l_index';
+@import 'layout/l_main';
+@import 'layout/l_chapter';
 // @import 'sections/'
-// @import 'slides/'
+@import 'slides/0-1';
+@import 'slides/0-2';
+@import 'slides/0-3';

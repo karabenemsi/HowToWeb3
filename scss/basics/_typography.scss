@@ -20,7 +20,7 @@ h6,
   margin: 0;
 
   line-height: 1;
-  font-family: 'Linotype-Univers';
+  font-family: 'Barlow',serif;
 }
 
 @mixin typo_h1 {
@@ -29,6 +29,7 @@ h6,
   line-height: 3.375rem;
   font-weight: 300;
   letter-spacing: -1.5 * $spacing-var;
+  font-family: 'Staatliches', sans-serif;
 }
 
 @mixin typo_h2 {
@@ -37,6 +38,7 @@ h6,
   line-height: 2.75rem;
   font-weight: 300;
   letter-spacing: -0.5 * $spacing-var;
+  font-family: 'Staatliches', sans-serif;
 }
 
 @mixin typo_h3 {
@@ -46,6 +48,7 @@ h6,
   // line-height: 50 * $convert-var;
   line-height: 1.875rem;
   letter-spacing: 0 * $spacing-var;
+  font-family: 'Staatliches', sans-serif;
 }
 
 @mixin typo_h4 {
