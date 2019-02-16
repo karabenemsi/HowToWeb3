@@ -1,0 +1,34 @@
+section
+  section
+    img(src="./img/0/repoplus.svg", alt="" style="height:20rem; margin-bottom: 5rem")
+    h3 Repository einrichten
+    .subtitle1 git init / git clone / git config
+  section(data-background="#a3f2e6")
+    h3 Das Git Repository
+    p Ein Git-Repository ist ein virtueller Speicher deines Projekts. Damit kannst du Versionen deines Codes speichern und bei Bedarf auf sie zugreifen. 
+  section(data-background="#B2E097")
+    h3 Neues Repository anlegen: 
+      code git init
+    p Zum Erstellen eines neuen Repositorys benutzt du den Befehl 
+      code git init
+      | .
+      code git init
+      |  ist ein einmaliger Befehl während der Ersteinrichtung eines neuen Repositorys. Durch das Ausführen dieses Befehls wird ein 
+      code .git
+      | -Unterverzeichnis in deinem aktuellen Arbeitsverzeichnis erstellt. Dabei wird auch ein neuer Master-Branch erstellt. 
+
+    pre 
+      code.bash.
+        cd /path/to/your/existing/code
+        it init
+  section(data-background="#008E74")
+    h3 Bestehendes Repository klonen: 
+      code git clone
+    p Wenn ein Projekt bereits in einem zentralen Repository eingerichtet wurde, ist ein Klon-Befehl für Benutzer die gängigste Art, einen lokalen Entwicklungsklon zu erstellen. Genau wie 
+      code git init
+      |  ist das Klonen im Allgemeinen ein einmaliger Vorgang. Sobald ein Entwickler eine Arbeitskopie erhalten hat, werden alle Versionskontrollvorgänge über sein lokales Repository verwaltet.
+    pre
+      code.bash.
+        git clone <repo-url>
+    .examplebox
+

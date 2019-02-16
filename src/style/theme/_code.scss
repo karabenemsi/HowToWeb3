@@ -1,0 +1,23 @@
+section.code{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex !important;
+  h4 {
+    color: #fff
+  }
+  .htmltab, .csstab{
+    width: 50%;
+    pre{
+      // overflow-y: scroll;
+      height: calc(100vh - 20rem);
+    }
+    code{
+      overflow-y:scroll;
+      height: 100%;
+    }
+  }
+  .previewside{
+    width: 50%;
+  }
+}

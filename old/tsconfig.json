@@ -1,0 +1,12 @@
+{
+  "include": [
+    "src/js/**/*"
+  ],
+  "exlude":[
+    "src/js/plugin/**/*"
+  ],
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "target": "es5"
+  }
+}
