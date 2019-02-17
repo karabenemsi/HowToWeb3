@@ -4,62 +4,46 @@ section
   //- .body
   section.split(data-background="#282c34").dark
     .0-2-left(style="width:50%")
-      h4 Peter
+      h4 Heinz
       pre
-        code.c.
-          int fibonacci() {
-            int n, first = 0, second = 1, next, c;
-            n = 8;
-          
-            for (c = 0; c < n; c++)
-            {
-              if (c <= 1)
-                next = c;
-              else
+        code.json.
+          {
+            "headquarter":
               {
-                next = first + second;
-                first = second;
-                second = next;
-              }
-              printf("%d\n", next);
-            }
-          
-            return 0;
+                  "planet":"Earth",
+                  "name":"Doofenshmirtz Evil Inc.",
+                  "employees": 30
+              },
+            "subdiaries":[{
+                "planet":"Moon",
+                "name":"Doofenshmirtz Moon Telescope.",
+                "employees": 3
+            },
+            {
+                "planet":"Io",
+                "name":"IOnisationinator Station",
+                "employees": 5
+            }]
           }
     .0-2-right(style="width:50%")
-      h4 Oskar
+      h4 Vanessa
       pre
-        code.c.
-          int fibonacci()
+        code.json.
           {
-            int n, first = 0, second = 1, next, c;
-            n = 5;
-          
-            for (c = 0; c < n; c++)
-            {
-              if (c <= 1)
-                next = c;
-              else
+            "headquarter":
               {
-                next = first + second;
-                first = second;
-                second = next;
-              }
-              // Ausgbe ist nicht notwendig
-              // printf("%d\n", next);
-            }
-          
-            return 0;
+                  "planet":"Earth",
+                  "name":"Doofenshmirtz Evil Inc.",
+                  "employees": 30
+              },
+            "subdiaries":[{
+                "planet":"Moon",
+                "name":"Doofenshmirtz Moon Telescope",
+                "employees": 3
+            },
+            {
+                "planet":"Mars",
+                "name":"Doofenshmirtz Evil Annex",
+                "employees": 5
+            }]
           }
-  section.flex(data-notes="SVN = Apache Subversion")
-    h4 Code-Sharing
-    ul
-      li Emails schicken
-      li Dropbox/OneDrive/GDrive ...
-      li Netzlaufwerk
-      li ...
-      li SVN
-      li Git
-
-  section.flex(data-background="#27AEBD")
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam aliquam nihil iste odio magnam unde voluptate fugit sapiente suscipit nam, quo, delectus sit harum aliquid perferendis quod numquam ipsa.

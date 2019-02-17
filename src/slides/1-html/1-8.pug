@@ -1,66 +1,140 @@
 - var notes = ''
 section(data-notes=notes)
-  section
-    h3 Intro
-        //- span presents
-    .subtitle1 Seitenstruktur
-  section
-    h3 Codebeispiele
-    pre
-      code.html.
-         &lt;!DOCTYPE html&gt;
-          &lt;html lang="en"&gt;
-            &lt;head&gt;
-              &lt;meta charset="utf-8"&gt;
-              &lt;title&gt;HowToWeb2.0&lt;/title&gt;
-              &lt;link rel="stylesheet" type="text/css" href="../assets/css/main.css"&gt;
-            &lt;/head&gt;
-  section.code(data-background="#282c34")
-    .htmltab
-      h4 index.html
-      .codetab
-        pre
-          code.html.
-            &lt;section class="heroimage"&gt;&lt;/section&gt;
-            &lt;header&gt;
-              &lt;div class="container"&gt;
-                &lt;div class="logo"&gt;
-                  &lt;h1&gt;JA&lt;/h1&gt;
-                &lt;/div&gt;
-                &lt;nav&gt;
-                &lt;/nav&gt;
-              &lt;/div&gt;
-            &lt;/header&gt;
-            &lt;main&gt;
-            &lt;/main&gt;
-    .csstab
-      h4 style.css
-      .codetab
-        pre
-          code.css.
-            header {
-              background: #18a9de;
-              margin: 0;
-              padding: 0;
-              width: 100%;
-              height: 4rem;
-              box-shadow: 0 0.25rem 0.5rem 0 rgba(60, 60, 60, 0.3);
-            }
+  section#1.explanation.active
+    h2 Textabsätze
+    p.lgfont
+      code.green &lt;p&gt;
+      code.default Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      code.green &lt;/p&gt;
+        
+    .nextslide
+  section#2.explanation
+    .previouslide
+    h2 Zeilenumbrüche
+    p.lgfont.center.lgpad
+      code.red &lt;br&gt;
+    .codebox
+      pre(class="brush: xml").
+        &lt;p&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing 
+          &lt;br&gt; elit, sed do eiusmod tempor
+          &lt;br&gt; incididunt ut labore et dolore magna aliqua.
+        &lt;p&gt;
 
-            header::after {
-              content: ' ';
-              display: table;
-              clear: both;
-            }
+    .nextslide
+  section#3.explanation
+    .previouslide
+    h2 Formattierter Text
+    p.lgfont.center.lgpad
+      code.red &lt;pre&gt;...&lt;/pre&gt;
+    .codebox
+      pre(class="brush: xml").
+        &lt;pre&gt;
+        Dunkel war’s, der Mond schien helle,
+        schneebedeckt die grüne Flur,
+        als ein Wagen blitzesschnelle,
+        langsam um die Ecke fuhr.
+        &lt;pre&gt;      
+  
+    .nextslide
+  section#4.code.slide_paragraph_1
+    .previouslide
+    .codeside
+      .htmltab
+        h3 index.html
+        .codetab
+          pre(class="brush: xml").
+            &lt;h1&gt;Gedicht&lt;/h1&gt;
+            &lt;p&gt;
+            Dunkel war’s, der Mond schien helle,
+            &lt;br&gt; schneebedeckt die grüne Flur,
+            &lt;br&gt; als ein Wagen blitzesschnelle,
+            &lt;br&gt; langsam um die Ecke fuhr.
+            &lt;/p&gt;
+            &lt;p&gt;
+            Drinnen saßen stehend Leute,
+            &lt;br&gt; schweigend ins Gespräch vertieft,
+            &lt;br&gt; als ein totgeschoss’ner Hase
+            &lt;br&gt; auf der Sandbank Schlittschuh lief.
+            &lt;/p&gt;
+            
+            &lt;pre&gt;
+            Dunkel war’s, der Mond schien helle,
+            schneebedeckt die grüne Flur,
+            als ein Wagen blitzesschnelle,
+            langsam um die Ecke fuhr.
 
-            header .container {
-              max-width: 800px;
-              margin: 0 auto;
-            }
+            Drinnen saßen stehend Leute,
+            schweigend ins Gespräch vertieft,
+            als ein totgeschoss’ner Hase
+            auf der Sandbank Schlittschuh lief.
+            &lt;/pre&gt;
 
-            header .logo {
-              padding: 0.5rem;
-              float: left;
-            }
+    
+    .previewside.preview
+      .prettydiv
+        h1 Gedicht
+        p 
+          | Dunkel war’s, der Mond schien helle,
+          br
+          | schneebedeckt die grüne Flur,
+          br
+          | als ein Wagen blitzesschnelle,
+          br
+          | langsam um die Ecke fuhr.
+        p 
+          | Drinnen saßen stehend Leute,
+          br
+          | schweigend ins Gespräch vertieft,
+          br
+          | als ein totgeschoss’ner Hase
+          br
+          | auf der Sandbank Schlittschuh lief.
+        pre.
+          Dunkel war’s, der Mond schien helle,
+          schneebedeckt die grüne Flur,
+          als ein Wagen blitzesschnelle,
+          langsam um die Ecke fuhr.
 
+          Drinnen saßen stehend Leute,
+          schweigend ins Gespräch vertieft,
+          als ein totgeschoss’ner Hase
+          auf der Sandbank Schlittschuh lief.
+    .nextslide
+  section#5.explanation
+    .previouslide
 
+    h2 Text formatieren
+    p Fetter 
+      b Text
+    p.center.mpad.lgfont
+      code.bluelight Fetter &lt;b&gt;Text&lt;/b&gt;
+    p Wichtiger 
+      strong Text
+    p.center.mpad.lgfont
+      code.orange Wichtiger &lt;strong&gt;Text&lt;/strong&gt;
+    p Kursiver 
+      i Text
+    p.center.mpad.lgfont
+      code.purple Kursiver &lt;i&gt;Text&lt;/i&gt;
+    p Gelöschter 
+      del Text
+    p.center.mpad.lgfont
+      code.green Gelöschter &lt;del&gt;Text&lt;/del&gt;
+    
+    .nextslide
+  section#6.explanation
+    .previouslide
+    p Eingefügter 
+      ins Text
+    p.center.mpad.lgfont
+      code.orange Eingefügter &lt;ins&gt;Text&lt;/ins&gt;
+    p Tiefgestellter 
+      sub Text
+    p.center.mpad.lgfont
+      code.purple Tiefgestellter &lt;sub&gt;Text&lt;/sub&gt;
+    p Hochgestellter 
+      sup Text
+    p.center.mpad.lgfont
+      code.green Hochgestellter &lt;sup&gt;Text&lt;/sup&gt;
+    .nextslide  

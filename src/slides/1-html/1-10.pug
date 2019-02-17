@@ -1,66 +1,55 @@
 - var notes = ''
 section(data-notes=notes)
-  section
-    h3 Intro
-        //- span presents
-    .subtitle1 Seitenstruktur
-  section
-    h3 Codebeispiele
-    pre
-      code.html.
-         &lt;!DOCTYPE html&gt;
-          &lt;html lang="en"&gt;
-            &lt;head&gt;
-              &lt;meta charset="utf-8"&gt;
-              &lt;title&gt;HowToWeb2.0&lt;/title&gt;
-              &lt;link rel="stylesheet" type="text/css" href="../assets/css/main.css"&gt;
-            &lt;/head&gt;
-  section.code(data-background="#282c34")
-    .htmltab
-      h4 index.html
-      .codetab
-        pre
-          code.html.
-            &lt;section class="heroimage"&gt;&lt;/section&gt;
-            &lt;header&gt;
-              &lt;div class="container"&gt;
-                &lt;div class="logo"&gt;
-                  &lt;h1&gt;JA&lt;/h1&gt;
-                &lt;/div&gt;
-                &lt;nav&gt;
-                &lt;/nav&gt;
-              &lt;/div&gt;
-            &lt;/header&gt;
-            &lt;main&gt;
-            &lt;/main&gt;
-    .csstab
-      h4 style.css
-      .codetab
-        pre
-          code.css.
-            header {
-              background: #18a9de;
-              margin: 0;
-              padding: 0;
-              width: 100%;
-              height: 4rem;
-              box-shadow: 0 0.25rem 0.5rem 0 rgba(60, 60, 60, 0.3);
-            }
-
-            header::after {
-              content: ' ';
-              display: table;
-              clear: both;
-            }
-
-            header .container {
-              max-width: 800px;
-              margin: 0 auto;
-            }
-
-            header .logo {
-              padding: 0.5rem;
-              float: left;
-            }
-
-
+  section#1.explanation.slide_css_1.active
+    h2 Cascading Style Sheets
+    .demo
+      .d1
+      .d2
+      .d3
+      p.d4 CSS = Aussehen und Farben
+      p.d5 Manipulate Text 
+        span.color Colors,
+        span.box Boxes
+        
+    .nextslide
+  section#2.explanation
+    .previouslide
+    h2 Inline CSS
+    p.center.lgfont.lgpad
+      code.red &lt;h1 style="color:red"&gt;Rote Überschrift&lt;/h1&gt;
+    
+    .nextslide
+  section#3.explanation
+    .previouslide
+    h2 Internal CSS
+      .codebox
+        pre(class="brush: xml").
+          &lt;head&gt;
+            &lt;title&gt;Hello&lt;/title&gt;
+            &lt;style&gt;
+              h1 {
+                color: red;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt; Rote Überschrift&lt;/h1&gt;
+          &lt;/body&gt;
+          
+    
+    .nextslide
+  section#4.explanation
+    .previouslide
+    h2 External CSS
+    .codebox
+      pre(class="brush: xml").
+        &lt;head&gt;
+          &lt;title&gt;Hello&lt;/title&gt;
+          &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt; Rote Überschrift&lt;/h1&gt;
+        &lt;/body&gt;        
+        
+        
+    .nextslide
