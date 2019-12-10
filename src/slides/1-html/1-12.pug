@@ -1,0 +1,36 @@
+- var notes = ''
+section(data-notes=notes)
+  section
+    h3 Intro
+        //- span presents
+    .subtitle1 Seitenstruktur
+  section#1.explanation.active
+    h2 Links
+    p.center.xlgpad.xlgfont
+      code.purple &lt;a href="url"&gt;Link Text&lt;/a&gt;
+    .nextslide
+  section#2.explanation
+    .previouslide
+    h2 Externe Links
+    p.center.mpad.lgfont
+      code.purple &lt;a href="//google.com"&gt;Google&lt;/a&gt;
+    h2 Protokoll-Links
+    p.center.mpad.lgfont
+      code.green &lt;a href="mailto:demo@gmail.com"&gt;Mail an demo&lt;/a&gt;
+    .nextslide
+  section#3.explanation
+    .previouslide
+    h2 Interne Links
+    h3 Link  auf andere Seiten
+    .codebox
+      pre(class="brush: xml").
+        &lt;a href="page2.html"&gt;Seite gleicher Ebene&lt;/a&gt;
+        &lt;a href="folder/page2.html"&gt;Seite in Ordner "folder"&lt;/a&gt;
+        &lt;a href="../page2.html"&gt;Seite auf höherer Ebene&lt;/a&gt;
+        &lt;a href="../../page2.html"&gt;Seite zwei Ebenen höher&lt;/a&gt;
+    h3 Link  auf Ids
+    .codebox
+      pre(class="brush: xml").
+        &lt;a href="#paragraph"&gt;Link zu Paragraph&lt;/a&gt;
+        &lt;p id="paragraph"&gt;lorem ipsum&lt;/p&gt;
+    .nextslide  

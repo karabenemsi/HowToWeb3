@@ -1,0 +1,21 @@
+- var notes = ''
+section(data-notes=notes)
+  section#1.explanation.active
+    h2 Ids
+    p.center.xlgfont.lgpad
+      code.red &lt;p id="ersterAbsatz"&gt; lorem &lt;/p&gt;
+    .codebox
+      pre(class="brush: xml").
+        &lt;p id="ersterAbsatz"&gt; lorem &lt;/p&gt;
+        &lt;p id="zweiterAbsatz"&gt; lorem &lt;/p&gt;
+        
+        &lt;p id="ersterAbsatz"&gt; lorem &lt;/p&gt;&lt;!-- Fehler, nicht erlaubt --&gt;
+    .nextslide
+  section#2.explanation
+    .previouslide
+    h3 In HTML:
+    p.center.xlgfont.lgpad
+      code.orange &lt;p id="id1"&gt; lorem &lt;/p&gt;
+    h3 In CSS:
+    p.center.xlgfont.lgpad
+      code.bluelight #id1 {}

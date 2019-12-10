@@ -1,0 +1,43 @@
+- var notes = ''
+section(data-notes=notes)
+  section#1.explanation.slide_forms_1.active
+    h2 Formulare
+    form
+      .input-block
+        .input-group.has-content
+          input(type="text")
+          label Name
+        .input-group
+          input(type="text")
+          label Prename
+        .input-group
+          input(type="text")
+          label Company
+        .input-group
+          input(type="submit", value="Send")
+          
+    .nextslide
+  section#2.explanation
+    .previouslide
+    h2 Formulare
+    p.center.xlgfont.lgpad
+      code.pink &lt;form&gt;&lt;/form&gt;
+    p.center.xlgfont.lgpad
+      code.orange &lt;input type="text"&gt;
+      code.green &lt;input type="submit"&gt;
+      code.purple &lt;input type="number"&gt;
+    .nextslide
+  section#3.explanation
+    .previouslide
+    .codebox
+      pre(class="brush: xml").
+        <form>
+          <input type="text">
+          <input type="number">
+          <input type="submit">
+        </form>
+    form.lgpad
+      input(type="text")
+      input(type="number")
+      input(type="submit")
+              

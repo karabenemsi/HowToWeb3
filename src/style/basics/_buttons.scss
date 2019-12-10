@@ -1,0 +1,67 @@
+// <reference path="../global.scss" />
+/* -----Buttons----- */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    display: inline-block;
+    text-align: center;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 1rem 1rem;
+    line-height: 1.1;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
+    border: none;
+    font-size: 0.9rem;
+    letter-spacing: normal;
+    color: #fff;
+    background-color: #004f23;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.button:hover,
+.button:active,
+.button:focus,
+button:hover,
+button:active,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus {
+    /* Impressive hover effects */
+    background-color: lighten(#004f23, 2);
+    // transform: scale(1.01);
+    color: #666;
+    // border-color: #92bbaa;
+    outline: 0;
+}
+
+.button-container {
+    display: flex;
+    padding: 2rem;
+    &.center {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+.button.icon {
+    background: none !important;
+    padding: 0;
+}
