@@ -1,66 +1,73 @@
 - var notes = ''
-section(data-notes=notes)
+section
   section
-    h2 Intro
+    h2 www.doofenschmirtz.evil
         //- span presents
-    .subtitle1 Seitenstruktur
-  section
-    h3 Codebeispiele
+    .subtitle1 Eine erste Seite
+  section(data-notes="Schön bunt hier, nicht bei euch", data-background="#282c34").dark
+    h3 Grundgerüst
     pre
-      code.html.
-         &lt;!DOCTYPE html&gt;
-          &lt;html lang="en"&gt;
-            &lt;head&gt;
-              &lt;meta charset="utf-8"&gt;
-              &lt;title&gt;HowToWeb2.0&lt;/title&gt;
-              &lt;link rel="stylesheet" type="text/css" href="../assets/css/main.css"&gt;
-            &lt;/head&gt;
-  section.code(data-background="#282c34")
-    .htmltab
-      h4 index.html
-      .codetab
-        pre
-          code.html.
-            &lt;section class="heroimage"&gt;&lt;/section&gt;
-            &lt;header&gt;
-              &lt;div class="container"&gt;
-                &lt;div class="logo"&gt;
-                  &lt;h1&gt;JA&lt;/h1&gt;
-                &lt;/div&gt;
-                &lt;nav&gt;
-                &lt;/nav&gt;
-              &lt;/div&gt;
-            &lt;/header&gt;
-            &lt;main&gt;
-            &lt;/main&gt;
-    .csstab
-      h4 style.css
-      .codetab
-        pre
-          code.css.
-            header {
-              background: #18a9de;
-              margin: 0;
-              padding: 0;
-              width: 100%;
-              height: 4rem;
-              box-shadow: 0 0.25rem 0.5rem 0 rgba(60, 60, 60, 0.3);
-            }
+      code.html.background.
+        &lt;!doctype html&gt;
+        &lt;html lang="de"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Doofenschmirtz Evil Inc.&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;p&gt;Dieser Text wird im Browserfenster angezeigt.&lt;/p&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+  section
+    h3 Was brauchen wir eigentlich?
+    
+  //- section.code(data-background="#282c34")
+  //-   .htmltab
+  //-     h4 index.html
+  //-     .codetab
+  //-       pre
+  //-         code.html.
+  //-           &lt;section class="heroimage"&gt;&lt;/section&gt;
+  //-           &lt;header&gt;
+  //-             &lt;div class="container"&gt;
+  //-               &lt;div class="logo"&gt;
+  //-                 &lt;h1&gt;JA&lt;/h1&gt;
+  //-               &lt;/div&gt;
+  //-               &lt;nav&gt;
+  //-               &lt;/nav&gt;
+  //-             &lt;/div&gt;
+  //-           &lt;/header&gt;
+  //-           &lt;main&gt;
+  //-           &lt;/main&gt;
+  //-   .csstab
+  //-     h4 style.css
+  //-     .codetab
+  //-       pre
+  //-         code.css.
+  //-           header {
+  //-             background: #18a9de;
+  //-             margin: 0;
+  //-             padding: 0;
+  //-             width: 100%;
+  //-             height: 4rem;
+  //-             box-shadow: 0 0.25rem 0.5rem 0 rgba(60, 60, 60, 0.3);
+  //-           }
 
-            header::after {
-              content: ' ';
-              display: table;
-              clear: both;
-            }
+  //-           header::after {
+  //-             content: ' ';
+  //-             display: table;
+  //-             clear: both;
+  //-           }
 
-            header .container {
-              max-width: 800px;
-              margin: 0 auto;
-            }
+  //-           header .container {
+  //-             max-width: 800px;
+  //-             margin: 0 auto;
+  //-           }
 
-            header .logo {
-              padding: 0.5rem;
-              float: left;
+  //-           header .logo {
+  //-             padding: 0.5rem;
+  //-             float: left;
             }
 
 

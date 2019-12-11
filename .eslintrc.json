@@ -1,31 +1,20 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
-        "es6": false
+        "es6": true
     },
-    "extends": "babel",
+    "extends": [
+        "standard",
+        "prettier"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
     "parserOptions": {
-        "ecmaVersion": 9,
+        "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            2
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "no-console":"off"
     }
 }

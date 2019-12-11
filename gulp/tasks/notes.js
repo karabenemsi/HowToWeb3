@@ -1,5 +1,5 @@
 // Necessary Plugins
-const gulp     = require('gulp')
+const gulp     = require('gulp');
 
 // Move Notes
 module.exports = gulp.task('notes', () =>

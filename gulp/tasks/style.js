@@ -1,7 +1,7 @@
 // Necessary Plugins
-const gulp = require("gulp"),
-  plumber = require("gulp-plumber"),
-  paths = require("../paths");
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const paths = require('../paths');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
@@ -10,10 +10,10 @@ const rename = require('gulp-rename');
 // const concatCss = require('gulp-concat-css');
 
 // Call Stylus
-module.exports = gulp.task("style", () =>
+module.exports = gulp.task('style', () =>
   gulp.src(paths.source.style)
     .pipe(plumber())
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass().on('error', sass.logError))
 
     // .pipe(
     //   concatCss("main.css", {
@@ -25,9 +25,9 @@ module.exports = gulp.task("style", () =>
     .pipe(minifyCss())
     .pipe(
       rename({
-        extname: ".min.css"
+        extname: '.min.css'
       })
     )
-    .pipe(sourcemaps.write(""))
+    .pipe(sourcemaps.write(''))
     .pipe(gulp.dest(paths.dist.css))
 );

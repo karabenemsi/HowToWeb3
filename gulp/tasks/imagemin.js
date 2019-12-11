@@ -1,11 +1,11 @@
 // Necessary Plugins
-const gulp      = require('gulp')
-    , plumber   = require('gulp-plumber')
-    , paths     = require('../paths')
-    , imagemin  = require('gulp-imagemin');
+const gulp      = require('gulp');
+const plumber   = require('gulp-plumber');
+const paths     = require('../paths');
+// const imin  = require('gulp-imagemin');;
 
 // Call Imagemin
-module.exports = gulp.task('imagemin', () =>
+module.imagemin = gulp.task('imagemin', () =>
   gulp.src(paths.source.img)
     .pipe(plumber())
     // .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
