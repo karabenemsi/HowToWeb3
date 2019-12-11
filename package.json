@@ -41,7 +41,8 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "uuid": "^3.3.3"
   },
   "browserslist": [
     "> 1%",

@@ -1,28 +1,36 @@
-- var notes = ''
+- var notes = 'Dateinamen immer lowercase'
 section(data-notes=notes)
   section
-    h2 Attribute
-    p Enthältz zusätliche Informationen
-    p Steht im Start-Tag
-    p.center.xlgpad.xlgfont
-      code.bluelight &lt;tag attr="value"&gt;...&lt;/tag&gt;
-      
-        
-    .nextslide
+    h2 Organistion
   section
-    .previouslide
-    h2 Meistgenutzte Attribute
-    h3 Das lang Attribut
-    p.center.mpad.lgfont
-      code.bluelight &lt;html lang="de"&gt;
-    h3 Das title Attribut
-    p.center.mpad.lgfont
-      code.orange &lt;p title="Abschnittstitel"&gt;
-    h3 Das href Attribut
-    p.center.mpad.lgfont
-      code.purple &lt;a href="//google.de"&gt;
-    h3 Das src und alt Attribut
-    p.center.mpad.lgfont
-      code.green &lt;img src="./images/bild.jpg" alt="Bild"&gt;
-  
+    h3 Dateistruktur
+    p
+      pre(style="font-size:4rem;width:50%").
+         website
+         |
+        (├─ js)
+        (├─ css)
+         ├─ img
+         ├─ html
+         └─ index.html
+  section
+    h3 Konventionen
+    .subtitle "... handelt es sich bei dem Kodex eher um sogenannte Richtlinien als um Regeln"
+    .fragment
+      h4 Tags und Attribute klein schreiben
+      pre
+        code.html.background.
+          &lt;h1 href="..."&gt;Text&lt;/h1&gt;
+    .fragment
+      h4 Element mit 2 Leerzeichen einrücken
+      pre
+        code.html.background.
+          &lt;ul&gt;
+            &lt;li&gt;
+              &lt;ul&gt;
+                &lt;li&gt;...&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+          &lt;/ul&gt;
   

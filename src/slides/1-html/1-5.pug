@@ -1,72 +1,107 @@
 - var notes = ''
 section(data-notes=notes)
   section
-    h2 HTML Elemente
+    //- h2 Tabellen
+    table(style="font-size: 6rem")
+      thead
+        tr
+          th Produkt
+          th Preis
+      tbody
+        tr
+          td Data
+          td 186 TAD
+        tr
+          td Data
+          td 868 TAD
+        tr
+          td Data
+          td 6464 TAD
+        tr
+          td Data
+          td 14654 TAD
+  section(data-background="#282c34").dark
+    h2 Tabellen
+    pre
+      code.html.
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Produkt&lt;/th&gt;
+              &lt;th&gt;Preis&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Data&lt;/td&gt;
+              &lt;td&gt;186 TAD&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Data&lt;/td&gt;
+              &lt;td&gt;6464 TAD&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+  section(data-background="#282c34").dark
+    h4 preise.html
+    pre
+      code.html.
+        &lt;!doctype html&gt;
+        &lt;html lang="de"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Preise - Doofenschmirtz Evil Inc.&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Preistabelle&lt;/h1&gt;
+            &lt;table&gt;
+              &lt;thead&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;Produkt&lt;/th&gt;
+                  &lt;th&gt;Preis&lt;/th&gt;
+                &lt;/tr&gt;
+              &lt;/thead&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;186 TAD&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;868 TAD&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;6464 TAD&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;14654 TAD&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
   section
-    p
-      code.orange &lt;tagname&gt;Inhalt&lt;/tagname&gt;
-      h3 Paragraphen
-      p.mpad.center.lgfont
-        code.bluelight &lt;p&gt; Lorem ipsum dolor...&lt;/p&gt;
-      h3 Leere Elemente
-      p.mpad.center.lgfont
-        code.bluelight &lt;br&gt;
-        | , 
-        code.red &lt;img src=".." alt="..."&gt;
-        
-    .nextslide
-  section
-    .previouslide
-    h2 Elemente verschachteln
-    p.center HTML-Elemente können verschachtelt werden:
-    p.center.lgfont
-      code.red &lt;body&gt; &lt;h1&gt;Überschrift&lt;/h1&gt; &lt;/body&gt;
+    +preview('file://preise.html',[{title:'Doofenschmirtz Evil Inc.', active:false},{title:'Preise - Doofenschmirtz Evil Inc.', active:true}])
+      h1 Preistabelle
+      table
+        thead
+          tr
+            th Produkt
+            th Preis
+        tbody
+          tr
+            td Data
+            td 186 TAD
+          tr
+            td Data
+            td 868 TAD
+          tr
+            td Data
+            td 6464 TAD
+          tr
+            td Data
+            td 14654 TAD
 
-    .nextslide
-  section
-    .previouslide
-    .codeside
-      h3 Verschachteltes Dokument
-      .hmtltab
-        h3 index.html
-        .codetab
-          pre(class="brush: xml").
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-            &lt;head&gt;
-              &lt;title&gt;Verschachteltes Element&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-              &lt;h1&gt;Überschrift&lt;/h1&gt;
-              &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              &lt;/p&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
-              
-    .previewside.preview
-      .prettydiv
-        h1 Überschrift
-        p  Lorem ipsum dolor sit amet, consectetur adipisicing
-
-      
-    .nextslide
-  section
-    .previouslide
-    h2 Schreibempfehlungen
-    p.sfont Keine Pflicht aber empfohlen
-    p Tags und Attribute klein schreiben
-      br
-      code.red.linetrough.lgfont &lt;H1&gt;...&lt;/H1&gt;
-      br
-      code.red.lgfont &lt;h1&gt;...&lt;/h1&gt;
-      
-    p Verschachtelte Elemente mit 2 Leerzeichen einrücken
-    .codebox
-      pre(class="brush: xml").
-          &lt;html lang="de"&gt;
-            &lt;head&gt;
-              &lt;title&gt;HowToWeb2.0&lt;/title&gt;
-            &lt;/head&gt;
-            
-    .nextslide 

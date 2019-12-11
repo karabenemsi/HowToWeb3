@@ -1,45 +1,69 @@
 - var notes = ''
 section(data-notes=notes)
-      section
-        h2 Überschriften
-        p.center.lgfont
-          code.red &lt;h1&gt;Erste Ordnung&lt;/h1&gt;
-        p.center.lgfont
-          code.orange &lt;h2&gt;Zweite Ordnung&lt;/h2&gt;
-        p.center.lgfont
-          code.bluelight &lt;h3&gt;Dritte Ordnung&lt;/h3&gt;
-        p.center.lgfont
-          code.green &lt;h4&gt;Vierte Ordnung&lt;/h4&gt;
-        p.center.lgfont
-          code.purple &lt;h5&gt;Fünfte Ordnung&lt;/h5&gt;
-        p.center.lgfont
-          code.pink &lt;h6&gt;Sechste Ordnung&lt;/h6&gt;
-        .nextslide  
-      section.code
-        .previouslide
-        .codeside
-          .htmltab
-            h3 index.html
-            .codetab
-              pre(class="brush: xml").
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang='de'&gt;
-                  &lt;head&gt;
-                    &lt;title&gt;Eine HTML-Seite&lt;/title&gt;
-                  &lt;/head&gt;
-                  &lt;body&gt;
-                    &lt;h1&gt;Überschrift&lt;/h1&gt;
-                    &lt;h2&gt;Überschrift 2&lt;/h2&gt;
-                    &lt;h3&gt;Überschrift 1&lt;/h3&gt;
-                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-                  &lt;/body&gt;
-                  
-                &lt;/html&gt;
-                        
-        .previewside.preview
-          .livewrite
-            h1 Überschrift
-            h2 Überschrift 2
-            h3 Überschrift 3
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  section
+    h2 "Hyper, Hyper" -text
+  section
+    p
+      pre(style="font-size:4rem;width:50%").
+        website
+        |
+        ├─ js
+        ├─ css
+        ├─ img
+        ├─ html
+        |  └─ preise.html
+        |
+        └─ index.html
+  section(data-background="#282c34").dark
+    h2 Verweise
+    pre
+      code.html.
+        &lt;a&gt;&lt;/a&gt;
+    pre.fragment
+      code.html.
+        &lt;a href="ziel.html"&gt;Weg zum Ziel&lt;/a&gt;
+  section(data-background="#282c34").dark
+    h2 Menü
+    h4 index.html
+    pre
+      code.html.
+        &lt;!doctype html&gt;
+        &lt;html lang="de"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Doofenschmirtz Evil Inc.&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Willkommen bei Doofenshmirtz Evil Incorporated&lt;h1p&gt;
+            &lt;nav&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a tabindex="0" aria-current="page"&gt;Startseite&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="html/preise.html"&gt;Preise&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="html/bilder.html"&gt;Bilder&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/nav&gt;
+            ...
+
+  section(data-background="#282c34").dark
+    h2 Menü
+    h4 preise.html
+    pre
+      code.html.
+        &lt;!doctype html&gt;
+        &lt;html lang="de"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Preise - Doofenschmirtz Evil Inc.&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Preistabelle&lt;/h1&gt;
+            &lt;nav&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a href="../index.html"&gt;Startseite&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a tabindex="0" aria-current="page"&gt;Preise&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="bilder.html"&gt;Bilder&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/nav&gt;
+            ...
