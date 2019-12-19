@@ -1,6 +1,7 @@
-const gulp   = require('gulp')
+const gulp = require('gulp');
 const fs = require('fs');
 const path = require('path');
+const del = require('del');
 const tasks = fs.readdirSync('./gulp/tasks/');
 
 tasks.forEach((task) =>
@@ -38,5 +39,11 @@ gulp.task('watch', () => {
   gulp.watch(paths.source.img, gulp.series('imagemin'));
 });
 
+const clean = (done) => {
+  return del([paths.dist.html]);
+};
 
-module.exports = gulp.task('default', gulp.series('js', 'pug', 'notes', 'style', 'imagemin', serve, 'watch', reload));
+
+module.exports = gulp.task('default', gulp.series(clean, 'js', 'pug', 'notes', 'style', 'imagemin', serve, 'watch', reload));
+
+exports.build = gulp.task('build', gulp.series(clean, 'js', 'pug', 'notes', 'style', 'imagemin'));

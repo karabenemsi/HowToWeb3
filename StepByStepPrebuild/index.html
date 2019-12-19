@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StepByStep Prebuild</title>
+    <link rel="stylesheet" href="./css/stepbystep.css" attr>
+  </head>
+  <body>
+    <div class="exerciseoverlap">
+      <h2>Aufgabe:</h2>
+      <p>Schreibe eine Look-A-Like HTML-Seite mit externem Stylesheet für die linke Seite.</p>
+      <h2>Hilfe:</h2>
+      <h3>Projektbasis</h3>
+      <p>Bitte forkt das Repu unter <code>http://g11007630:3210/HowToWeb/StepByStep</code></p>
+      <h3>Bilder</h3>
+      <p>Unter <code>karabenemsi.github.io/HowToWeb2/assets/img/</code> gibt es die folgenden Unterverzeichnisse:
+        <ul>
+          <li> <code>/full</code></li>
+          <li> <code>/big</code></li>
+          <li> <code>/medium</code></li>
+          <li> <code>/small </code></li>
+        </ul>
+      </p>
+      <p>mit den folgenden Bildern: <code>img_f_001.jpg - img_f_146.jpg</code> bzw <code>img_b_001.jpg, img_m_001.jpg</code></p>
+      <p>Dadurch erhaltet ihr Bildquellen mit <code>https://karabenemsi.github.io/HowToWeb2/assets/img/big/imb_b_002.jpg</code></p>
+    </div>
+    <div class="hints"></div>
+    <div class="leftpart">
+      <section class="heroimage"></section>
+      <header>
+        <div class="container">
+          <div class="logo">
+            <h1>JA</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section>
+          <h1>Demobuild</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img src="../assets/img/big/img_b_040.jpg" alt="Stock">
+        </section>
+      </main>
+    </div>
+    <div class="rightpart">
+      <section class="heroimage"></section>
+      <header>
+        <div class="container">
+          <div class="logo">
+            <h1>JA</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section>
+          <h1>Demobuild</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img src="../assets/img/big/img_b_040.jpg" alt="Stock">
+        </section>
+      </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $('.hints').click(function(){
+        $('.exerciseoverlap').toggleClass('closed');
+      });
+    </script>
+  </body>
+</html>

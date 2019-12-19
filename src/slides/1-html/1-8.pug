@@ -2,4 +2,38 @@
 section(data-notes=notes)
   section(data-background="https://karabenemsi.github.io/HowToWeb2/assets/img/big/img_b_117.jpg").dark
     h2 Bilder
-  
+  section(data-background="#282c34").dark
+    //- h2 Menü
+    pre(style="font-size: 2rem")
+      code.html.
+        &lt;img src="../img/heinz.png" height="394" width="222" alt="Heinz Doofenschmirtz" &gt;
+        &lt;img src="../img/fuchs.png"  height="533" width="800" alt="" &gt;
+  section(data-background="#282c34").dark
+    h4 bilder.html
+    pre
+      code.html.
+        &lt;!doctype html&gt;
+        &lt;html lang="de"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Bilder - Doofenschmirtz Evil Inc.&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Bilder&lt;/h1&gt;
+            ...
+            &lt;img src="../img/heinz.png"  height="394" width="222" &gt;
+            &lt;img src="../img/fuchs.png"  height="533" width="800" &gt;
+  section
+    +preview('file://bilder.html',[{title:'Doofenschmirtz Evil Inc.', active:false},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:true}])
+      h1 Bilder
+      div
+        ul
+          li
+            a(href="html/preise.html") Startseite
+          li
+            a(href="html/preise.html") Preise
+          li
+            a(tabindex="0" aria-current="page") Bilder
+      img(src="./img/1/heinz.png"  height="364" width="222")
+      img(src="https://karabenemsi.github.io/HowToWeb2/assets/img/medium/img_m_145.jpg"  height="533" width="800")

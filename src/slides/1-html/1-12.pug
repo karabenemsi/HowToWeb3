@@ -1,36 +1,74 @@
 - var notes = ''
+- var headingStyle = 'display:inline-block; color: #6a4ded; font-size: 30rem; transform: rotateX(90deg); position: absolute; bottom: 0rem; left: 25%; transform-style: preserve-3d;'
 section(data-notes=notes)
-  section
-    h3 Intro
-        //- span presents
-    .subtitle1 Seitenstruktur
-  section.explanation.active
-    h2 Links
-    p.center.xlgpad.xlgfont
-      code.purple &lt;a href="url"&gt;Link Text&lt;/a&gt;
-    .nextslide
-  section.explanation
-    .previouslide
-    h2 Externe Links
-    p.center.mpad.lgfont
-      code.purple &lt;a href="//google.com"&gt;Google&lt;/a&gt;
-    h2 Protokoll-Links
-    p.center.mpad.lgfont
-      code.green &lt;a href="mailto:demo@gmail.com"&gt;Mail an demo&lt;/a&gt;
-    .nextslide
-  section.explanation
-    .previouslide
-    h2 Interne Links
-    h3 Link  auf andere Seiten
-    .codebox
-      pre(class="brush: xml").
-        &lt;a href="page2.html"&gt;Seite gleicher Ebene&lt;/a&gt;
-        &lt;a href="folder/page2.html"&gt;Seite in Ordner "folder"&lt;/a&gt;
-        &lt;a href="../page2.html"&gt;Seite auf höherer Ebene&lt;/a&gt;
-        &lt;a href="../../page2.html"&gt;Seite zwei Ebenen höher&lt;/a&gt;
-    h3 Link  auf Ids
-    .codebox
-      pre(class="brush: xml").
-        &lt;a href="#paragraph"&gt;Link zu Paragraph&lt;/a&gt;
-        &lt;p id="paragraph"&gt;lorem ipsum&lt;/p&gt;
-    .nextslide  
+
+  section(style="position:relative; perspective: 600px;perspective-origin: 60% 0%;")
+    h2 Let's go 
+      span(id="1-11-heading", style=headingStyle) crazy
+
+  section(data-background="#282c34").dark
+    .split
+      .left
+        h4 style.css
+        pre
+          code.css.
+            body{
+              margin: 0;
+            }
+            h1 {
+              background: green;
+              color: white;
+              font-size: 2.5em;
+              font-family: cursive;
+              text-align: center;
+            }
+            p {
+              font-size: 1.5em;
+              text-align: justify;
+              font-family: sans-serif;
+            }
+      .right
+        +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:true},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+          style.
+            body{
+              margin: 0;
+            }
+            h1 {
+              background: green;
+              color: white;
+              font-size: 2.5em;
+              font-family: cursive;
+              text-align: center;
+            }
+            p {
+              font-size: 1.5em;
+              text-align: justify;
+              font-family: sans-serif;
+            }
+          h1 Willkommen bei Doofenshmirtz Evil Incorporated
+          div.nav
+            ul
+              li
+                a(href="html/preise.html") Startseite
+              li
+                a(href="html/preise.html") Preise
+              li
+                a(tabindex="0" aria-current="page") Bilder
+          .content
+            p Lorem ipsum dolor sit amet, modus regione labitur te quo, at noluisse signiferumque vim, ex ornatus habemus propriae vel. At quodsi similique forensibus vim, iriure gloriatur dissentias ea mei. Eos te quod solum. Et has unum commodo fuisset. Eam at viris putent explicari.</p>
+            h2 Erfindungen (chronologisch)
+            ol
+              li Magnetism Magnifier
+              li Destruct-inator
+              li Giant Robot
+              li Deflate-inator
+              li Age Accelerator-inator
+              li Slave-inator
+              li Drill-inator
+            h2 Weitere Erfindungen
+            ul
+              li Copy and Paste-Inator
+              li Melt-inator 6-5000
+              li Wood-inator
+            p Nam facer novum sonet ea, nam iriure consetetur et. Ne nulla ubique per, dicunt reprimique te mel. Omittantur efficiantur ius et, usu in habeo facer inani, docendi liberavisse instructior in mei. Qui choro ignota ei, wisi ipsum nam ne. Mollis recusabo eu his, ea hinc volutpat definiebas duo.
+            p Est in mundi tollit, nam et dicunt contentiones, ex usu audire diceret facilisis. Eum viderer corpora sadipscing ut, eu ius aeterno integre, mei ex libris perpetua comprehensam. Errem tamquam pertinax no vis, eum velit suavitate an, est populo option at. Id sea utamur regione democritum, ea utroque laboramus eam. Nostrum quaestio no has, cu pri aperiam oblique habemus. An moderatius omittantur definitiones sit.

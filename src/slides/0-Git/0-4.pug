@@ -75,18 +75,18 @@ section
 
   section
     pre
-      code.bash.
+      code.bash.background.
         $ git status
         On branch master
         Initial commit
-        Changes to be comm  itted:
+        Changes to be committed:
         (use "git rm --cached &lt;file&gt;..." to unstage)
         new file: masterplan.json
     pre.fragment
-      code.bash.
+      code.bash.background.
         $ git commit -m 'Initial commit'
-        [master (root-commit) fedc3d3] Initial commit
-        1 file changed, 1 insertion(+)
+        [master (root-commit) 449da69] Initial commit
+        1 file changed, 12 insertions(+)
         create mode 100644 masterplan.json
   section
     img(src="./img/0/8.svg", alt="")
@@ -97,10 +97,10 @@ section
     img(src="./img/0/15.svg", alt="")
   section
     pre
-      code.bash.
+      code.bash.background.
         $ git push origin master
     pre.fragment
-      code.bash.
+      code.bash.background.
         Counting objects: 3, done.
         Writing objects: 100% (3/3), 253 bytes | 0 bytes/s, done.
         Total 3 (delta 0), reused 0 (delta 0) To
@@ -110,10 +110,10 @@ section
   section(data-background="#3191A4")
     h3 7. Updates von Masterserver holen
     pre
-      code.bash.
+      code.bash.background.
         $ git pull --all
     pre
-      code.bash.
+      code.bash.background.
         Fetching origin
         remote: Counting objects: 3, done.
         remote: Compressing objects: 100% (3/3), done.
