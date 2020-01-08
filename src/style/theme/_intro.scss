@@ -37,15 +37,16 @@
 
   .date{
     transform: rotate(-90deg);
-    font-size: 1.7rem;
+    font-size: 1.975rem;
     width: 2rem;
     position: relative;
-    bottom: -2.3rem;
+    bottom: -11rem;
+    white-space: nowrap;
   }
   h1{
     color: contrast(secondary);
     position: relative;
-    padding: 0;
+    padding: 0 0 0 3rem;
     margin: 0;
     font-size: 13rem;
     text-align: left;

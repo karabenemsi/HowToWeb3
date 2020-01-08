@@ -1,7 +1,9 @@
 - var notes = ''
+- var date = new Date().toLocaleDateString('de-DE',{day:"2-digit",month:"2-digit",year:"numeric"})
 section(data-notes=notes, data-background="https://karabenemsi.github.io/HowToWeb2/assets/img/big/img_b_143.jpg").intro
   .block
     .content
+      .date=date
       h1 HowToWeb 3.0
         .author KaraBeNemsi
           //- span presents

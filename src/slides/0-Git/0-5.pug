@@ -1,19 +1,76 @@
 section
   section
-    img(src="./img/0/repoplus.svg", alt="" style="height:20rem; margin-bottom: 5rem")
+    img(src="./img/0/20.svg", alt="" style="height:20rem; margin-bottom: 5rem")
     h2 Die Mission: Imperium ausweiten
     .subtitle1 Doofenschmirtz Evil Inc.
+
   section
-    h3 1. Masterplan abholen
+    h3 Plan kopieren
+    .subtitle Fork doofenhe/masterplan
   section
-    h3 2. Eigene Vorschläge vorbereiten
+    h3 Masterplan abholen
+    pre
+      code.bash.background.
+        $ git clone https://doofenhe@g11007630:3210/doofenhe/masterplan.git
+        Password
   section
-    h3 3. Eigene Vorschläge erarbeiten
+    h3 Eigene Vorschläge vorbereiten
+    img(src="./img/0/22.svg", alt="" style="height:20rem;")
+    pre
+      code.bash.background.
+        $ git branch new-subsidiaries
+        $ git checkout new-subsidiaries
+        # or like this
+        $ git checkout -b new-subsidiaries
+
+  section(data-background="#282c34").dark
+    h3 Eigene Vorschläge erarbeiten
+    h4 masterplan.json
+    pre
+      code.json.
+        {
+          "headquarter": {
+            ...
+          },
+          "subsidiaries":[{
+                "planet":"Moon",
+                "name":"Doofenshmirtz Moon Telescope.",
+                "employees": 3
+            },
+            {
+                "planet":"Io",
+                "name":"IOnisationinator Station",
+                "employees": 5
+            }],
+          "inventions": [
+            ...
+          ]
+        }
   section
-    h3 4. Committen
+    h3 Committen
+    pre
+      code.bash.background.
+        $ git add .
+        $ git commit -m "More subsidiaries"
   section
-    h3 5. Zum Master senden
+    h3 Zum Master senden
+    pre
+      code.bash.background.
+        $ git push --set-upstream origin new-subsidiaries
+        Total 0 (delta 0), reused 0 (delta 0)
+        To http://192.168.124.235:3210/doofenhe/masterplan.git
+        * [new branch]      new-subsidiaries -> new-subsidiaries
+        Branch 'new-subsidiaries' set up to track remote branch 'new-subsidiaries' from 'origin'.
   section
-    h3 6. Änderungen zusammenführen
-  section
-    h3 7. Plan kopieren
+    h3 Änderungen zusammenführen
+    pre
+      code.bash.background.
+        $ git merge new-inventions
+        Auto-merging masterplan.json
+        hint: Waiting for your editor to close the file...
+        Merge made by the 'recursive' strategy.
+        masterplan.json | 3 +++
+        1 file changed, 3 insertions(+)
+
+
+
