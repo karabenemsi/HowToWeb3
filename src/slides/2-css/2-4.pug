@@ -1,0 +1,37 @@
+section
+  section
+    h2 Vererbung
+    pre
+      code.html.background.
+        &lt;div class="red"&gt;
+          &lt;h1&gt;Hallo&lt;/h1&gt;            
+        &lt;/dvi&gt;
+    pre
+      code.css.background.
+        .red {
+          color: red;
+          text-align: center;
+        }
+    +preview-slim("height: 10rem; width:20rem")
+      div(style="color: red; text-align:center;width:100%;font-size: 3em")
+        h1(style="color: red; text-align:center;") Hallo
+
+
+  section(data-background="#282c34").dark
+    pre
+      code.css.
+        Autos in Deutschland {
+          color: blau;
+        }
+        Autos in Deutschland in Ebingen {
+          color: rot;
+        }
+        Autos in Deutschland in Ebingen von Groz-Beckert {
+          color: grün;
+        }
+        Autos in Deutschland {
+          color: orange;
+        }
+        Autos von Groz-Beckert {
+          color: pink;
+        }

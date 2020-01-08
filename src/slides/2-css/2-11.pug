@@ -1,0 +1,59 @@
+-var pfad = "slides/"
+-var home = "../index.html"
+-var next = '2_12_margin.html'
+-var previous = '2_10_box-modell.html'
+-var title = "Border"
+-var sleep = "../sleep.html"
+doctype html
+html(lang='de')
+  include ../master/head.jade
+  body.cssslides
+    include ../master/header.jade
+    main
+      section#1.explanation.active
+        h2  Ränder
+        .codebox
+          pre(class="brush: css").
+              border-style: solid; /* dotted | dashed | double | groove | none */
+        .sdemodiv(style="border: 10px solid #3252de")
+        .codebox
+          pre(class="brush: css").
+              border-style: solid dotted dashed solid;
+        .sdemodiv(style="border-width: 10px;border-style:solid dotted dashed solid;border-color:#12de96;")
+        .nextslide
+      section#2.explanation
+        .previouslide
+        .codebox
+          pre(class="brush: css").
+              border-width: 20px;
+        .sdemodiv(style="border: 20px solid #3252de")
+        .codebox
+          pre(class="brush: css").
+              border-color: #de54aa;
+      
+        .sdemodiv(style="border: 10px solid #de54aa")
+        .nextslide
+      section#3.explanation
+        .previouslide
+        p.prefix -prefix-
+        .codebox
+          pre(class="brush: css").
+            border-radius: 30px;
+            -o-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+            
+        .sdemodiv(style="border: 10px solid #de54aa; border-radius: 30px")
+        .nextslide
+      section#4.explanation
+        .previouslide
+        .codebox
+          pre(class="brush: css").
+              border: 10px solid #de54aa;
+        .sdemodiv(style="border: 10px solid #de54aa;")
+      
+          
+
+
+
+  include ../master/footer.jade
