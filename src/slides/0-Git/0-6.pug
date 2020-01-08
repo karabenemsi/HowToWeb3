@@ -15,16 +15,18 @@ section
       code.bash.
         $ git clone http://192.168.124.235:3210/doofenhe/conflicts.git
         $ cd conflicts
-  section(data-background="#282c34").dark
+  section
     h3 Merge versuchen
     pre
-      code.bash.
+      code.bash.background.
         $ git merge merge-me
         Auto-merging merge.txt
         CONFLICT (content): Merge conflict in merge.txt
         Automatic merge failed; fix conflicts and then commit the result.
 
-    pre.fragment
+    img.fragment(src="./img/doof/doof-oh.jpg", alt="" style="height:20rem")
+  section(data-background="#282c34").dark
+    pre
       code.bash.
         doofenhe ~/repos/conflicts (master|MERGING)
         $ git status
