@@ -1,26 +1,13 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_25_mediaquery.html'
--var previous = '2_23_pseudoklassen.html'
--var title = "Transitions"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Übergänge
-        p.prefix -prefix- (-webkit-)
-        .codebox
-          pre(class="brush: css").
-              transition: all 0.5s ease-in-out 0.3s;
-              transition: property duration timing-function delay;
-              
-        .demodiv.transOhne
-          p Hover Me
-        .demodiv.transMit
-          p Hover Me
-
-  include ../master/footer.jade
+section
+  section
+    h2 Übergänge
+    p.prefix -prefix- (-webkit-)
+    pre
+      code.css.background.
+          transition: all 0.5s ease-in-out 0.3s;
+          transition: property duration timing-function delay;
+          
+    .demodiv.transOhne
+      p Hover Me
+    .demodiv.transMit
+      p Hover Me

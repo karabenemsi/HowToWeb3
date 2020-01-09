@@ -1,39 +1,23 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_23_pseudoelemente.html'
--var previous = '2_21_kombinatoren.html'
--var title = "Pseudo-Klassen"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Pseudo-Klassen
-        .codebox
-          pre(class="brush: css").
-            p:hover {}
-            
-            input:focus {}
-            
-            p:first-child {}
-            
-            a:active {}
-            
-            :not(p) {}
-              
-            a:visited {}
-            
-        .nextslide
-      section#2.explanation
-        .previouslide
-        .pclasshover.bg_blue2
-          p Hover Me
-        .pclassfocus
-          input(type="text", name="name", placeholder="Focus Me")
-
-
-
-  include ../master/footer.jade
+section
+  section
+    h2 Pseudo-Klassen
+    pre
+      code.css.background.
+        p:hover {}
+        
+        input:focus {}
+        
+        p:first-child {}
+        
+        a:active {}
+        
+        :not(p) {}
+          
+        a:visited {}
+        
+    
+  section
+    .pclasshover.bg_blue2
+      p Hover Me
+    .pclassfocus
+      input(type="text", name="name", placeholder="Focus Me")

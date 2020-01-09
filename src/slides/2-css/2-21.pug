@@ -1,46 +1,30 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_22_pseudoklassen.html'
--var previous = '2_20_float.html'
--var title = "Kombinatoren"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Kombinatoren
-        .codebox
-          pre(class="brush: css").
-            /* Absteigend */
-            div p {
-              color: #548645;
-            }
-            /* Kind */
-            div > p {
-              color: #548645;
-            }
-            /* Zwilling */
-            div ~ p {
-              color: #548645;
-            }
-            
-        .nextslide
-      section#2.explanation
-        .previouslide
-        .codebox
-          pre(class="brush: css").
-            /* Schlecht */
-            body > .wrapper > main > section > p > a > span {
-              background: yellow;
-            }
-            /* Gut */
-            .bg-yellow {
-              background: yellow;
-            }
-
-
-
-  include ../master/footer.jade
+section
+  section
+    h2 Kombinatoren
+    pre
+      code.css.background.
+        /* Absteigend */
+        div p {
+          color: #548645;
+        }
+        /* Kind */
+        div > p {
+          color: #548645;
+        }
+        /* Zwilling */
+        div ~ p {
+          color: #548645;
+        }
+        
+    
+  section
+    pre
+      code.css.background.
+        /* Schlecht */
+        body > .wrapper > main > section > p > a > span {
+          background: yellow;
+        }
+        /* Gut */
+        .bg-yellow {
+          background: yellow;
+        }

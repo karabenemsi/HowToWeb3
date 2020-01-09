@@ -1,46 +1,29 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_24_transitions.html'
--var previous = '2_22_pseudoklassen.html'
--var title = "Pseudo-Elemente"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation
-        h2 Pseudo-Elemente
-        .codebox
-          pre(class="brush: css").
-            div::before {}
-            
-            div::after {}
-                                  
-            ::selection {}
-            
-            ::root{}
-        .nextslide
-      section#2.explanation.active
-        .previouslide
-        .codebox
-          pre(class="brush: css").
-            .watchthis::before, watchthis::after {
-              content: 'before';
-              background: yellow;
-            }
-            .watchthis::after {
-              content: 'after';
-            }
-            .watchthis::selection {
-              color: #89adf8;
-              background: #484654;
-            }
-        .pelementsdemo
-            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque consequuntur quisquam quia ea est quae blanditiis dolor sunt sed exercitationem accusamus itaque explicabo provident ipsam doloribus dolore, minus hic.
-
-
-
-
-  include ../master/footer.jade
+section
+  section
+    h2 Pseudo-Elemente
+    pre
+      code.css.background.
+        div::before {}
+        
+        div::after {}
+                              
+        ::selection {}
+        
+        ::root{}
+    
+  section
+    pre
+      code.css.background.
+        .watchthis::before, watchthis::after {
+          content: 'before';
+          background: yellow;
+        }
+        .watchthis::after {
+          content: 'after';
+        }
+        .watchthis::selection {
+          color: #89adf8;
+          background: #484654;
+        }
+    .pelementsdemo
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque consequuntur quisquam quia ea est quae blanditiis dolor sunt sed exercitationem accusamus itaque explicabo provident ipsam doloribus dolore, minus hic.

@@ -1,51 +1,33 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_10_box-modell.html'
--var previous = '2_8_lists.html'
--var title = "Background"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Hintergründe
+section
+  section
+    h2 Hintergründe
 
-        .codebox
-          pre(class="brush: css").
-            background-color: #1573bf;
-        .demodiv(style="background: #1573bf")
-        .codebox
-          pre(class="brush: css").
-            background-image: url('bear.png');
-        .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center")
-        .nextslide
-      section#2.explanation
-        .previouslide
-        .codebox
-          pre(class="brush: css").
-            background-repeat: no-repeat;
-        .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') left center no-repeat")
-        .codebox
-          pre(class="brush: css").
-            background-position: center top;
-        .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center top no-repeat")
-        .nextslide
-      section#3.explanation
-        .previouslide
-        .codebox
-          pre(class="brush: css").
-            background-size: cover; /* contain | 50px 30px */
-        .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center; background-size: cover")
-        .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center no-repeat; background-size: contain")
-        .codebox
-          pre(class="brush: css").
-            background: url('bear.png') no-repeat center center;
-        .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center no-repeat")
-
-
-
-
-  include ../master/footer.jade
+    pre
+      code.css.background.
+        background-color: #1573bf;
+    .demodiv(style="background: #1573bf")
+    pre
+      code.css.background.
+        background-image: url('bear.png');
+    .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center")
+    
+  section
+    pre
+      code.css.background.
+        background-repeat: no-repeat;
+    .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') left center no-repeat")
+    pre
+      code.css.background.
+        background-position: center top;
+    .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center top no-repeat")
+    
+  section
+    pre
+      code.css.background.
+        background-size: cover; /* contain | 50px 30px */
+    .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center; background-size: cover")
+    .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center no-repeat; background-size: contain")
+    pre
+      code.css.background.
+        background: url('bear.png') no-repeat center center;
+    .demodiv(style="background: url('../assets/img/small/img_s_089.jpg') center center no-repeat")

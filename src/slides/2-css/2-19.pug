@@ -1,28 +1,13 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_20_float.html'
--var previous = '2_18_flexbox.html'
--var title = "Position"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Position
-        .codebox
-          pre(class="brush: css").
-              position: static;
-              position: relative;
-              position: fixed;
-              position: absolute;
-              top: 15px;
-              right: 6px;
-              bottom: 0;
-              left: 80px;
-
-
-
-  include ../master/footer.jade
+section
+  section
+    h2 Position
+    pre
+      code.css.background.
+          position: static;
+          position: relative;
+          position: fixed;
+          position: absolute;
+          top: 15px;
+          right: 6px;
+          bottom: 0;
+          left: 80px;

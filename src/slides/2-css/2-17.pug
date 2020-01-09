@@ -1,33 +1,18 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_18_flexbox.html'
--var previous = '2_16_shadow.html'
--var title = "Display"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Display
-        .codebox
-          pre(class="brush: css").
-              display: block;
-              display: inline;
-              display: inline-block;
-              display: none;
-        .examplebox
-          p Hi, this is 
-            span(style="display:block;height:2em;background:    #2a69c6;") Steven
-          p Hi, this is 
-            span(style="display: inline; height: 2em;background:#2a69c6;") Steven
-          p Hi, this is 
-            span(style="display: inline-block; height: 2em;background:#2a69c6;") Steven
-          p Hi, this is 
-            span(style="display: none; height: 2em;background:#2a69c6;") Steven
-
-
-
-  include ../master/footer.jade
+section
+  section
+    h2 Display
+    pre
+      code.css.background.
+          display: block;
+          display: inline;
+          display: inline-block;
+          display: none;
+    .examplebox
+      p Hi, this is 
+        span(style="display:block;height:2em;background:    #2a69c6;") Steven
+      p Hi, this is 
+        span(style="display: inline; height: 2em;background:#2a69c6;") Steven
+      p Hi, this is 
+        span(style="display: inline-block; height: 2em;background:#2a69c6;") Steven
+      p Hi, this is 
+        span(style="display: none; height: 2em;background:#2a69c6;") Steven

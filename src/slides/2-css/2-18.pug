@@ -1,30 +1,16 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_19_position.html'
--var previous = '2_17_display.html'
--var title = "Flexbox"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Flexbox
-        p.prefix (-prefix-)
-        .codebox
-          pre(class="brush: css").
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              flex-direction: row;
+section
+  section
+    h2 Flexbox
+    p.prefix (-prefix-)
+    pre
+      code.css.background.
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: row;
 
-        .demodiv(style="width: 100%;display: flex;flex-direction: row;justify-content: space-around;align-items: center;border: 2px solid #253845;")
-          div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")
-          div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")
-          div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")
-          div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")
-
-
-  include ../master/footer.jade
+    .demodiv(style="width: 100%;display: flex;flex-direction: row;justify-content: space-around;align-items: center;border: 2px solid #253845;")
+      div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")
+      div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")
+      div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")
+      div(style="display: block;height: 2em;border: 2px solid #253845;width:2em;")

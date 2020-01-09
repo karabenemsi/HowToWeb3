@@ -1,25 +1,11 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_21_kombinatoren.html'
--var previous = '2_19_position.html'
--var title = "Float"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Float
-        .codebox
-          pre(class="brush: css").
-              float: left;
-              float: right;
-        .examplebox
-          .demodiv(style="float:left;background:#159756;")
-          .demodiv(style="float:right;background:#482846;")
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facere corporis, modi dolorem ullam obcaecati sed odio culpa nemo inventore, impedit ipsum hic magnam doloribus illum ipsa ea optio aliquam eos suscipit molestiae accusamus quibusdam? Maxime mollitia velit asperiores quisquam dolor, eum pariatur cum obcaecati minima ducimus sint beatae nesciunt, dignissimos unde cupiditate! Impedit totam cumque, facilis libero quaerat at molestiae fugiat odio consectetur adipisci voluptates ex omnis minus minima temporibus sed soluta blanditiis reiciendis illum qui commodi laborum! Hic.
-
-
-  include ../master/footer.jade
+section
+  section
+    h2 Float
+    pre
+      code.css.background.
+          float: left;
+          float: right;
+    .examplebox
+      .demodiv(style="float:left;background:#159756;")
+      .demodiv(style="float:right;background:#482846;")
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facere corporis, modi dolorem ullam obcaecati sed odio culpa nemo inventore, impedit ipsum hic magnam doloribus illum ipsa ea optio aliquam eos suscipit molestiae accusamus quibusdam? Maxime mollitia velit asperiores quisquam dolor, eum pariatur cum obcaecati minima ducimus sint beatae nesciunt, dignissimos unde cupiditate! Impedit totam cumque, facilis libero quaerat at molestiae fugiat odio consectetur adipisci voluptates ex omnis minus minima temporibus sed soluta blanditiis reiciendis illum qui commodi laborum! Hic.

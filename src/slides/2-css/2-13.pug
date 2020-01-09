@@ -1,26 +1,12 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_14_height.html'
--var previous = '2_12_margin.html'
--var title = "Padding"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Innenstand
-        .codebox
-          pre(class="brush: css").
-              padding: 2rem 5rem 1rem 4rem;
-        .halfddiv.bg_blue(style="margin-right:10%;")
-          .bg_red(style="height:50%;width:50%;")
-            p.small(style="margin: 0;padding: 25%") 50% x 50%
-        .halfddiv.bg_blue(style="padding: 2rem 5rem 1rem 4rem")
-          .bg_yellow(style="height:50%;width:50%;")
-            p.small(style="margin: 0;padding: 25% 0 0 25%") 50% x 50%
-
-
-  include ../master/footer.jade
+section
+  section
+    h2 Innenstand
+    pre
+      code.css.background.
+          padding: 2rem 5rem 1rem 4rem;
+    .halfddiv.bg_blue(style="margin-right:10%;")
+      .bg_red(style="height:50%;width:50%;")
+        p.small(style="margin: 0;padding: 25%") 50% x 50%
+    .halfddiv.bg_blue(style="padding: 2rem 5rem 1rem 4rem")
+      .bg_yellow(style="height:50%;width:50%;")
+        p.small(style="margin: 0;padding: 25% 0 0 25%") 50% x 50%

@@ -1,27 +1,14 @@
--var pfad = "slides/"
--var home = "../index.html"
--var next = '2_9_background.html'
--var previous = '2_7_font.html'
--var title = "Listen"
--var sleep = "../sleep.html"
-doctype html
-html(lang='de')
-  include ../master/head.jade
-  body.cssslides
-    include ../master/header.jade
-    main
-      section#1.explanation.active
-        h2 Listen
-        .codebox
-          pre(class="brush: css").
-            ol {
-              list-style-type: decimal; /* lower-alpha | numeric |
-                     armenian | georgian | ... */
-              list-style-image: url("list.png");
-              list-style-position: outside; /* inside */
-            }
-            ul {
-              list-style: square inside;
-            }
-
-  include ../master/footer.jade
+section
+  section
+    h2 Listen
+    pre
+      code.css.background.
+        ol {
+          list-style-type: decimal; /* lower-alpha | numeric |
+                  armenian | georgian | ... */
+          list-style-image: url("list.png");
+          list-style-position: outside; /* inside */
+        }
+        ul {
+          list-style: square inside;
+        }
