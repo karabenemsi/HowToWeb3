@@ -131,9 +131,9 @@ $mdc-elevation-transition-duration: 280ms !default;
     #{$ambient-z-value} $ambient-color;
 }
 
-@mixin transition($props ,$duration:0.3s) {
+@mixin transition($props ,$duration:0.3s, $easefunc:cubic-bezier(.4, 0, .2, 1)) {
 
   @each $name in $props{
-    transition: $name $duration cubic-bezier(.4, 0, .2, 1);
+    transition: $name $duration $easefunc;
   }
 }

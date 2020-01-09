@@ -1,0 +1,87 @@
+
+.input-block {
+  height: auto;
+  width: 800px;
+  width: 50rem;
+  margin: 160px auto 0;
+  margin: 10rem auto 0;
+  background: #578CA9;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
+  padding: 16px;
+  padding: 1rem;
+}
+
+.input-group {
+  margin: 16px auto 0;
+  margin: 1rem auto 0;
+  position: relative;
+  width: 80%;
+}
+
+.input-group input {
+  width: calc(100% - 1.5rem);
+  height: 48px;
+  height: 3rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #142642;
+  padding: 24px 0 8px 24px;
+  padding: 1.5rem 0 0.5rem 1.5rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
+  color: #FFC800;
+  z-index: 20;
+}
+
+.input-group input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #FFC800;
+}
+
+.input-group input.has-content + label,
+.input-group input:focus + label {
+  font-size: 9.6px;
+  font-size: 0.6rem;
+  color: rgba(255, 200, 0, .4);
+  position: absolute;
+  top: 0px;
+  top: 0rem;
+  left: 8px;
+  left: 0.5rem;
+}
+
+.input-group label {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #142642;
+  position: absolute;
+  top: 16px;
+  top: 1rem;
+  left: 16px;
+  left: 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.input-group input[type="submit"] {
+  border: 2px solid #142642;
+  border-radius: 0;
+  padding: 0;
+  width: 100%;
+  margin: 32px 0;
+  margin: 2rem 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  cursor: pointer;
+  color: #142642;
+  font-size: 80%;
+}
+
+.input-group input[type="submit"]:hover, .input-group input[type="submit"]:focus {
+  border: 2px solid #FFC800;
+  color: rgba(255, 200, 0, .8);
+}

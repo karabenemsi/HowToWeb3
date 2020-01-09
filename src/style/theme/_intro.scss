@@ -23,7 +23,8 @@
     flex-wrap: wrap;
     padding: 0 0 0 16%;
     clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
-    @include transition(all, 0.5s);
+    @include transition(all, 0.5s,
+    cubic-bezier(0, 0, 0.3, 1));
   }
 
   .content{

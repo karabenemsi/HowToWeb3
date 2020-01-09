@@ -12,7 +12,7 @@ section
       .day#js_cal
         h2.bg_blue2 20
         p Mittwoch
-    
+
   section
     pre
       code.css.background.
@@ -24,8 +24,8 @@ section
     p(style="font-size: 2.5rem;text-shadow: 7px 7px;") Hello Everybody
     p(style="font-size: 2.5rem;text-shadow: 7px 7px rgb(30,150,132);") Hello Everybody
     p(style="font-size: 2.5rem;text-shadow: 7px 7px 7px rgb(30,150,132);") Hello Everybody
-    
-  section(data-background="#282c34").dark(data-transition="slide-in fade-out")
+
+  section(data-background="#282c34" data-transition="slide-in fade-out").dark
     .split
       .left
         h4 calendar.html
@@ -57,9 +57,9 @@ section
               height: 28rem;
               width: 20rem;
             }
-          
+
             ...
-  section(data-background="#282c34").dark(data-transition="fade-in fade-out")
+  section(data-background="#282c34" data-transition="fade-in fade-out").dark
     .split
       .left
         h4 calendar.html
@@ -84,7 +84,7 @@ section
         pre
           code.css.
             ...
-          
+
             h2 {
               border-radius: 1rem 1rem 0 0;
               width: 20rem;
@@ -97,9 +97,9 @@ section
               text-shadow: 0 0 2rem rgba(0,0,0,0.6);
               box-shadow: inset 0 0 4rem rgba(250,250,250,0.1);
             }
-            
+
             ...
-  section(data-background="#282c34").dark(data-transition="fade-in slide-out")
+  section(data-background="#282c34" data-transition="fade-in slide-out").dark
     .split
       .left
         h4 calendar.html
@@ -135,14 +135,14 @@ section
     +preview('file://calendar.html',[{title:'Calendar', active:true}])
       style.
         .day {
-              font-family: sans-serif;
-              margin: 5rem;
-              border-radius: 1rem;
-              box-shadow: 0 0 1rem rgba(30,30,30,0.6);
-              height: 28rem;
-              width: 20rem;
+          font-family: sans-serif;
+          margin: 5rem;
+          border-radius: 1rem;
+          box-shadow: 0 0 1rem rgba(30,30,30,0.6);
+          height: 28rem;
+          width: 20rem;
             }
-          
+
           h2 {
             border-radius: 1rem 1rem 0 0;
             width: 20rem;
@@ -155,7 +155,7 @@ section
             text-shadow: 0 0 2rem rgba(0,0,0,0.6);
             box-shadow: inset 0 0 4rem rgba(250,250,250,0.1);
           }
-          
+
           p {
             width: 100%;
             margin: 0;

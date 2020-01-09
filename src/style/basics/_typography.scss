@@ -125,22 +125,22 @@ h6,
   text-transform: uppercase;
 }
 
-h1 {
+h1, .typo_h1 {
   @include typo_h1;
 }
-h2 {
+h2, .typo_h2 {
   @include typo_h2;
 }
-h3 {
+h3, .typo_h3 {
   @include typo_h3;
 }
-h4 {
+h4, .typo_h4 {
   @include typo_h4;
 }
-h5 {
+h5, .typo_h5 {
   @include typo_h5;
 }
-h6 {
+h6, .typo_h6 {
   @include typo_h6;
 }
 .subtitle1 {
@@ -163,6 +163,11 @@ h6 {
 }
 .overline {
   @include typo_overline;
+}
+
+.typo_h4{
+  display: block;
+  margin: 0.5em 0
 }
 
 p {

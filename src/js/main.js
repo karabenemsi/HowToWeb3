@@ -1,9 +1,9 @@
 Reveal.initialize({
 	controls: true,
 	progress: true,
-	controlsTutorial: false,
-	history: true,
-	center: true,
+	controlsTutorial: true,
+  history: true,
+  hash: true,
 	controlsBackArrows: 'faded',
 	// Display the page number of the current slide
 	slideNumber: true,
@@ -27,7 +27,7 @@ Reveal.initialize({
 
 	// Flags whether to include the current fragment in the URL,
 	// so that reloading brings you to the same fragment position
-	fragmentInURL: false,
+	fragmentInURL: true,
 
 	// Flags if the presentation is running in an embedded mode,
 	// i.e. contained within a limited portion of the screen
@@ -42,7 +42,7 @@ Reveal.initialize({
 	// Specify the average time in seconds that you think you will spend
 	// presenting each slide. This is used to show a pacing timer in the
 	// speaker view
-	defaultTiming: 120,
+	defaultTiming: 270,
 	// Hides the address bar on mobile devices
 	hideAddressBar: true,
 
@@ -55,13 +55,13 @@ Reveal.initialize({
 	// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
 
 	// Parallax background size
-	// parallaxBackgroundSize: 'cover', // CSS syntax, e.g. "2100px 900px"
+	parallaxBackgroundSize: 'cover', // CSS syntax, e.g. "2100px 900px"
 
 	// Number of pixels to move the parallax background per slide
 	// - Calculated automatically unless specified
 	// - Set to 0 to disable movement along an axis
-	parallaxBackgroundHorizontal: null,
-	parallaxBackgroundVertical: null,
+	// parallaxBackgroundHorizontal: null,
+	// parallaxBackgroundVertical: null,
 
 	// The display mode that will be used to show slides
 	display: 'block',
@@ -82,6 +82,7 @@ Reveal.initialize({
 	dependencies: [
 		{ src: '/js/vendor/classList.js', condition: function() { return !document.body.classList; } },
 		{ src: 'js/vendor/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-		{ src: 'js/vendor/notes/notes.js', async: true }
+    // { src: 'js/vendor/notes/notes.js', async: true },
+    { src: 'js/vendor/zoom-js/zoom.js', async: true }
 	]
 });
