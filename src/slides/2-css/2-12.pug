@@ -3,10 +3,11 @@ section
     h2 Außenabstand
     pre
       code.css.background.
-          margin: 2rem 5rem 1rem 4rem;
-    .halfddiv.bg_blue(style="margin-right:10%")
-      .bg_red(style="height:50%;width:50%;")
-        p.small(style="margin: 0;padding: 25%") 50% x 50%
-    .halfddiv.bg_blue(style="")
-      .bg_yellow(style="height:50%;width:50%;margin: 2rem 5rem 1rem 4rem")
-        p.small(style="margin: 0;padding: 25% 0 0 25%") 50% x 50%
+          div { margin: 2rem 5rem 1rem 4rem; }
+    div(style="display:flex;justify-content: space-around")
+      .demo-large-pad-mar
+        .bg_red
+          p 50% x 50%
+      .demo-large-pad-mar(style="")
+        .bg_yellow(style="margin: 2rem 5rem 1rem 4rem")
+          p 50% x 50%
