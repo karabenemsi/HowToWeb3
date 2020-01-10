@@ -1,3 +1,191 @@
-section
+section.css-grid
   section
     h2 CSS-Grid
+    p.prefix No IE-Support
+  section
+    h5 Grid Container und Item
+    pre
+      code.html.
+        &lt;div class="container"&gt;
+          &lt;div class="item item-1"&gt;&lt;/div&gt;
+          &lt;div class="item item-2"&gt;&lt;/div&gt;
+          &lt;div class="item item-3"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+  section
+    h3 Grid-Line
+    img(src="./img/2/terms-grid-line.svg")
+  section
+    h3 Grid-Track
+    img(src="./img/2/terms-grid-track.svg")
+  section
+    h3 Grid-Cell
+    img(src="./img/2/terms-grid-cell.svg")
+  section
+    h3 Grid-Area
+    img(src="./img/2/terms-grid-area.svg")
+  section
+    pre
+      code.css.
+        .container {
+          display: grid | inline-grid;
+        }
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-columns: &lt;track-size&gt; ... | &lt;line-name&gt; &lt;track-size&gt; ...;
+          grid-template-rows: &lt;track-size&gt; ... | &lt;line-name&gt; &lt;track-size&gt; ...;
+        }
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-columns: 40px 50px auto 50px 40px;
+          grid-template-rows: 25% 100px auto;
+        }
+    img(src="./img/2/template-columns-rows-01.svg")
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+          grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+        }
+    img(src="./img/2/template-column-rows-02.svg")
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-rows: [row1-start] 25% [row1-end row2-start] 25% [row2-end];
+        }
+    pre
+      code.css.
+        .container {
+          grid-template-columns: repeat(3, 20px [col-start]);
+        }
+    pre
+      code.css.
+        .container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        .container {
+          grid-template-columns: 1fr 50px 1fr 1fr;
+        }
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-areas: 
+            "&lt;grid-area-name&gt; | . | none | ..."
+            "...";
+        }
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-areas: 
+            "header header header header"
+            "main main . sidebar"
+            "footer footer footer footer";
+        }
+    img(src="./img/2/dddgrid-template-areas.svg")
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-columns: 100px 50px 100px;
+          grid-template-rows: 80px auto 80px; 
+          grid-column-gap: 10px;
+          grid-row-gap: 15px;
+        }
+    img(src="./img/2/dddgrid-gap.svg")
+  section
+    pre
+      code.css.
+        .container {
+          justify-items: start | end | center | stretch;
+        }
+    img(src="./img/2/justify-items-start.svg")
+  section
+    pre
+      code.css.
+        .container {
+          align-items: start | end | center | stretch;
+        }
+    img(src="./img/2/align-items-start.svg")
+  section
+    pre
+      code.css.
+        .container {
+          justify-content: start | end | center | stretch | space-around | space-between | space-evenly;	
+        }
+    img(src="./img/2/justify-content-start.svg")
+  section
+    pre
+      code.css.
+        .container {
+          align-content: start | end | center | stretch | space-around | space-between | space-evenly;	
+        }
+    img(src="./img/2/align-content-start.svg")
+  section
+    pre
+      code.css.
+        .container {
+          grid-template-columns: 60px 60px;
+          grid-template-rows: 90px 90px;
+        }
+
+    pre.frament
+      code.css.
+        .item-a {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+        }
+        .item-b {
+          grid-column: 5 / 6;
+          grid-row: 2 / 3;
+        }
+  section
+    img(src="./img/2/grid-auto-columns-rows-02.svg")
+  section
+    pre
+      code.css.
+        .container {
+          grid-auto-columns: 60px;
+        }
+    img(src="./img/2/grid-auto-columns-rows-03.svg")
+  section
+    pre
+      code.css.
+        .container {
+          grid-auto-flow: row | column | row dense | column dense;
+        }
+    img(src="./img/2/grid-auto-flow-01.svg")  
+  section
+    img(src="./img/2/grid-auto-flow-02.svg")  
+  section
+    pre
+      code.css.
+        .item-a {
+          grid-column-start: 2;
+          grid-column-end: five;
+          grid-row-start: row1-start;
+          grid-row-end: 3;
+        }
+    img(src="./img/2/grid-column-row-start-end-01.svg")
+  section
+    pre
+      code.css.
+        .item-c {
+          grid-column: 3 / span 2;
+          grid-row: third-line / 4;
+        }
+    img(src="./img/2/grid-column-row.svg")
+  section
+    pre
+      code.css.
+        .item {
+          grid-area: &lt;name&gt; | &lt;row-start&gt; / &lt;column-start&gt; / &lt;row-end&gt; / &lt;column-end&gt;;
+        }
+    img(src="./img/2/grid-area.svg")
+
