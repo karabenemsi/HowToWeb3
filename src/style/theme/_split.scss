@@ -1,0 +1,12 @@
+.split{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  .left, .right{
+    flex-grow: 1;
+  }
+}

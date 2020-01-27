@@ -1,0 +1,59 @@
+mixin preview(url,tabs)
+  -
+    function uuidv4() {
+      return 'xxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+    var id = uuidv4()
+  .preview
+    .browser
+      .status-bar
+        .buttons
+      .tab-bar
+        each t in tabs
+          .tab(class={active: t.active})=t.title
+        .urlbar=url
+      .window(id=id)
+        if block
+          block
+        else
+          p No Content
+    script.
+      var win = document.getElementById(#{"'" + id + "'"});
+      var content = win.innerHTML
+      var iframe = document.createElement('iframe');
+      iframe.src = "about:blank";
+      win.parentNode.replaceChild(iframe, win)
+      iframe.contentWindow.document.open();
+      iframe.contentWindow.document.write(content);
+      iframe.contentWindow.document.close();
+
+
+mixin preview-slim(style)
+  -
+    function uuidv4() {
+      return 'xxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+    var id = uuidv4()
+  .preview.preview-slim
+    .browser(style=style)
+      .window(id=id)
+        if block
+          block
+        else
+          p No Content
+    script.
+      var win = document.getElementById(#{"'" + id + "'"});
+      var content = win.innerHTML
+      var iframe = document.createElement('iframe');
+      iframe.src = "about:blank";
+      win.parentNode.replaceChild(iframe, win)
+      iframe.contentWindow.document.open();
+      iframe.contentWindow.document.write(content);
+      iframe.contentWindow.document.close();
+

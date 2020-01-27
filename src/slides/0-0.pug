@@ -1,0 +1,10 @@
+- var notes = ''
+- var date = new Date().toLocaleDateString('de-DE',{day:"2-digit",month:"2-digit",year:"numeric"})
+section(data-notes=notes, data-background="https://howtoweb3.de/images/152.jpg").intro
+  .block
+    .content
+      .date=date
+      h1 HowToWeb 3
+        .author KaraBeNemsi
+          //- span presents
+      h2 Git, HTML und CSS

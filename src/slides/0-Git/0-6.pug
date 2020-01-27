@@ -1,0 +1,69 @@
+section
+  section
+    img(src="./img/0/hero.svg", alt="" style="height:20rem; margin-bottom: 5rem")
+    h2 Fehler ausmerzen
+    .subtitle1 Doofenschmirtz 
+      del Good 
+      | Evil Inc.
+
+  section
+    h3 Plan kopieren
+    .subtitle Fork doofenhe/conflicts
+  section(data-background="#282c34").dark
+    h3 Plan abrufen
+    pre
+      code.bash.
+        $ git clone http://192.168.124.235:3210/doofenhe/conflicts.git
+        $ cd conflicts
+  section
+    h3 Merge versuchen
+    pre
+      code.bash.background.
+        $ git merge merge-me
+        Auto-merging merge.txt
+        CONFLICT (content): Merge conflict in merge.txt
+        Automatic merge failed; fix conflicts and then commit the result.
+
+    img.fragment(src="./img/doof/doof-oh.jpg", alt="" style="height:20rem")
+  section(data-background="#282c34").dark
+    pre
+      code.bash.
+        doofenhe ~/repos/conflicts (master|MERGING)
+        $ git status
+        On branch master
+        Your branch is up to date with 'origin/master'.
+
+        You have unmerged paths.
+          (fix conflicts and run "git commit")
+          (use "git merge --abort" to abort the merge)
+
+        Unmerged paths:
+          (use "git add <file>..." to mark resolution)
+
+                both modified:   merge.txt
+
+        no changes added to commit (use "git add" and/or "git commit -a")
+  section(data-background="#282c34").dark
+    h3 Konflikt lösen
+    pre
+      code.text.
+        <<<<<<< HEAD
+        this is some content to mess with
+        content to append
+        =======
+        totally different content to merge later
+        >>>>>>> merge-me
+    pre.fragment
+      code.text.
+        this is some content to mess with
+        content to append
+        totally different content to merge later
+    pre.fragment
+      code.bash.
+        $ git add .
+        $ git commit -m "merged and resolved conflict in merge.txt"
+        [master 8a994d3] merged and resolved conflict in merge.txt
+
+
+    
+

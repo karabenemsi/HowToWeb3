@@ -1,0 +1,29 @@
+- var notes = ''
+- var headingStyle = 'display:inline-block; color: #6a4ded; font-size: 30rem; transform: rotateX(90deg); position: absolute; bottom: 0rem; left: 25%; transform-style: preserve-3d;'
+section(data-notes=notes)
+  section
+    h2 &lt;div&gt;Die Box&lt;/div&gt;
+
+    +preview-slim("width: 30rem; height: 20rem; margin: 5rem auto;")
+      style.
+        * {
+          color:red;
+        }
+      h2 Die Inatoren
+      ul
+        li Melt-inator 6-5000
+        li Go Home-Inator
+        li Animate-Inator
+      p Weitere Erfindungen gerne auf Nachfrage
+  section(data-background="#282c34").dark
+    pre
+      code.html.
+        &lt;div style="color: red"&gt;
+          &lt;h2&gt;Die Inatoren&lt;/h2&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Melt-inator 6-5000&lt;/li&gt;
+            &lt;li&gt;Go Home-Inator&lt;/li&gt;
+            &lt;li&gt;Animate-Inator&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Weitere Erfindungen gerne auf Nachfrage&lt;/p&gt;
+        &lt;/div&gt;

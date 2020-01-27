@@ -1,0 +1,24 @@
+
+$grid-breakpoints: (lg: 1200px, md: 840px,
+sm: 480px,
+xs: 0px) !default;
+
+$grid-columns: (lg: 12, md: 12,
+sm: 8,
+xs: 4) !default;
+
+$grid-default-margin: (lg: 24px, md: 24px,
+sm: 16px,
+xs: 16px) !default;
+
+$grid-default-gutter: (lg: 24px, md: 24px,
+sm: 16px,
+xs: 16px) !default;
+
+$grid-column-width: (lg: 72px, md: 72px,
+sm: 72px,
+xs: 72px) !default;
+
+$grid-default-column-span: 4 !default;
+
+$grid-max-width: 80rem !default;

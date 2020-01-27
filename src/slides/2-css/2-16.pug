@@ -1,0 +1,168 @@
+section
+  section.shadowdemo1.active
+    h2 Schatten
+    p.prefix (-prefix-)
+    .calendar
+      .day
+        h2.bg_blue 18
+        p Montag
+      .day
+        h2.bg_yellow 19
+        p Dienstag
+      .day#js_cal
+        h2.bg_blue2 20
+        p Mittwoch
+
+  section
+    pre
+      code.css.background.
+        p {
+          text-shadow: 7px 7px;
+          text-shadow: 7px 7px rgba(30,150,132);
+          text-shadow: 7px 7px 7px rgba(30,150,132);
+        }
+    p(style="font-size: 2.5rem;text-shadow: 7px 7px;") Hello Everybody
+    p(style="font-size: 2.5rem;text-shadow: 7px 7px rgb(30,150,132);") Hello Everybody
+    p(style="font-size: 2.5rem;text-shadow: 7px 7px 7px rgb(30,150,132);") Hello Everybody
+
+  section(data-background="#282c34" data-transition="slide-in fade-out").dark
+    .split
+      .left
+        h4 calendar.html
+        pre
+          code.html.
+            &lt;!doctype html&gt;
+            &lt;html lang="de"&gt;
+              &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Calendar&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div class="day"&gt;
+                  &lt;h2&gt;18&lt;/h2&gt;
+                  &lt;p&gt;18.Januar 2016&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+      .right
+        h4 style.css
+        pre
+          code.css.
+            .day {
+              font-family: sans-serif;
+              margin: 5rem;
+              border-radius: 1rem;
+              box-shadow: 0 0 1rem rgba(30,30,30,0.6);
+              height: 28rem;
+              width: 20rem;
+            }
+
+            ...
+  section(data-background="#282c34" data-transition="fade-in fade-out").dark
+    .split
+      .left
+        h4 calendar.html
+        pre
+          code.html.
+            &lt;!doctype html&gt;
+            &lt;html lang="de"&gt;
+              &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Calendar&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div class="day"&gt;
+                  &lt;h2&gt;18&lt;/h2&gt;
+                  &lt;p&gt;18.Januar 2016&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+      .right
+        h4 style.css
+        pre
+          code.css.
+            ...
+
+            h2 {
+              border-radius: 1rem 1rem 0 0;
+              width: 20rem;
+              margin: 0;
+              text-align: center;
+              font-size: 12rem;
+              padding: 4rem 0;
+              background: #2D7998;
+              color: #fff;
+              text-shadow: 0 0 2rem rgba(0,0,0,0.6);
+              box-shadow: inset 0 0 4rem rgba(250,250,250,0.1);
+            }
+
+            ...
+  section(data-background="#282c34" data-transition="fade-in slide-out").dark
+    .split
+      .left
+        h4 calendar.html
+        pre
+          code.html.
+            &lt;!doctype html&gt;
+            &lt;html lang="de"&gt;
+              &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Calendar&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div class="day"&gt;
+                  &lt;h2&gt;18&lt;/h2&gt;
+                  &lt;p&gt;18.Januar 2016&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+      .right
+        h4 style.css
+        pre
+          code.css.
+            ...
+            p {
+              width: 100%;
+              margin: 0;
+              padding: 2rem 0;
+              text-align: center;
+              font-size: 2rem;
+            }
+  section
+    +preview('file://calendar.html',[{title:'Calendar', active:true}])
+      style.
+        .day {
+          font-family: sans-serif;
+          margin: 5rem;
+          border-radius: 1rem;
+          box-shadow: 0 0 1rem rgba(30,30,30,0.6);
+          height: 28rem;
+          width: 20rem;
+            }
+
+          h2 {
+            border-radius: 1rem 1rem 0 0;
+            width: 20rem;
+            margin: 0;
+            text-align: center;
+            font-size: 12rem;
+            padding: 4rem 0;
+            background: #2D7998;
+            color: #fff;
+            text-shadow: 0 0 2rem rgba(0,0,0,0.6);
+            box-shadow: inset 0 0 4rem rgba(250,250,250,0.1);
+          }
+
+          p {
+            width: 100%;
+            margin: 0;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 2rem;
+          }
+      div.day
+        h2 14
+        p Mittwoch

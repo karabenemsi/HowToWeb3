@@ -1,0 +1,33 @@
+section
+  section
+    h2 Hintergründe
+
+    pre
+      code.css.background.
+        div { background-color: #1573bf; }
+    .demodiv(style="background: #1573bf")
+    pre
+      code.css.background.
+        div { background-image: url("cat.png"); }
+    .demodiv(style="background: url('./img/1/cat.jpg') center center")
+    
+  section
+    pre
+      code.css.background.
+        div { background-repeat: no-repeat; }
+    .demodiv(style="background: url('./img/1/cat.jpg') left center no-repeat")
+    pre
+      code.css.background.
+        div { background-position: center top; }
+    .demodiv(style="background: url('./img/1/cat.jpg') center top")
+    
+  section
+    pre
+      code.css.background.
+        div { background-size: cover; /* contain | 50px 30px */ }
+    .demodiv(style="background: url('./img/1/cat.jpg') center center; background-size: cover")
+    .demodiv(style="background: url('./img/1/cat.jpg') center center no-repeat; background-size: contain")
+    pre
+      code.css.background.
+        div { background: url('cat.png') no-repeat center center; }
+    .demodiv(style="background: url('./img/1/cat.jpg') center center no-repeat")

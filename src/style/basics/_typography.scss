@@ -1,0 +1,178 @@
+// <reference path="../global.scss" />
+// Light 300, Medium 500, regular 400
+$spacing-var: 0.0125rem;
+// $convert-var: 0.0625rem;
+$convert-var: 0.125rem;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.substitle1,
+.substitle2,
+.body1,
+.body2,
+.button,
+.caption,
+.overline {
+  padding: 0.2em 0;
+  margin: 0;
+  line-height: 1;
+  font-family: 'Barlow',serif;
+}
+
+@mixin typo_h1 {
+  font-size: 96 * $convert-var;
+  // font-size: 2.75rem;
+  line-height: 3.375rem;
+  font-weight: 300;
+  letter-spacing: -1.5 * $spacing-var;
+  font-family: 'Staatliches', sans-serif;
+}
+
+@mixin typo_h2 {
+  font-size: 60 * $convert-var;
+  // font-size: 2.375rem;
+  line-height: 2.75rem;
+  font-weight: 300;
+  letter-spacing: -0.5 * $spacing-var;
+  font-family: 'Staatliches', sans-serif;
+}
+
+@mixin typo_h3 {
+  font-size: 48 * $convert-var;
+  // font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 50 * $convert-var;
+  // line-height: 1.875rem;
+  letter-spacing: 0 * $spacing-var;
+  font-family: 'Staatliches', sans-serif;
+}
+
+@mixin typo_h4 {
+  font-size: 34 * $convert-var;
+  font-weight: 400;
+  line-height: 40 * $convert-var;
+  letter-spacing: 0.25 * $spacing-var;
+}
+
+@mixin typo_h5 {
+  font-size: 24 * $convert-var;
+  font-weight: 400;
+  line-height: 32 * $convert-var;
+  letter-spacing: 0 * $spacing-var;
+}
+
+@mixin typo_h6 {
+  font-size: 20 * $convert-var;
+  font-weight: 500;
+  line-height: 32 * $convert-var;
+  letter-spacing: 0.15 * $spacing-var;
+}
+
+@mixin typo_subtitle1 {
+  font-size: 16 * $convert-var;
+  font-weight: 700;
+  line-height: 28 * $convert-var;
+  letter-spacing: 0.15 * $spacing-var;
+}
+
+@mixin typo_subtitle2 {
+  font-size: 14 * $convert-var;
+  font-weight: 700;
+  line-height: 22 * $convert-var;
+  letter-spacing: 0.1 * $spacing-var;
+}
+
+@mixin typo_body1 {
+  font-size: 16 * $convert-var;
+  font-weight: 400;
+  // font-size: 2rem;
+  line-height: 24 * $convert-var;
+  letter-spacing: 0.5 * $spacing-var;
+}
+
+@mixin typo_body2 {
+  font-size: 14 * $convert-var;
+  font-weight: 400;
+  line-height: 20 * $convert-var;
+  letter-spacing: 0.25 * $spacing-var;
+}
+
+@mixin typo_button {
+  font-size: 14 * $convert-var;
+  // fonz-size: 1rem;
+  font-weight: 500;
+  // line-height: 36 * $convert-var;
+  letter-spacing: 0.75 * $spacing-var;
+  text-transform: uppercase;
+}
+
+@mixin typo_caption {
+  font-size: 12 * $convert-var;
+  font-weight: 400;
+  line-height: 20 * $convert-var;
+  letter-spacing: 0.4 * $spacing-var;
+}
+
+@mixin typo_overline {
+  font-size: 10 * $convert-var;
+  font-weight: 400;
+  line-height: 32 * $convert-var;
+  letter-spacing: 1.5 * $spacing-var;
+  text-transform: uppercase;
+}
+
+h1, .typo_h1 {
+  @include typo_h1;
+}
+h2, .typo_h2 {
+  @include typo_h2;
+}
+h3, .typo_h3 {
+  @include typo_h3;
+}
+h4, .typo_h4 {
+  @include typo_h4;
+}
+h5, .typo_h5 {
+  @include typo_h5;
+}
+h6, .typo_h6 {
+  @include typo_h6;
+}
+.subtitle1 {
+  @include typo_subtitle1;
+}
+.subtitle2 {
+  @include typo_subtitle2;
+}
+.body1 {
+  @include typo_body1;
+}
+.body2 {
+  @include typo_body2;
+}
+.button {
+  @include typo_button;
+}
+.caption {
+  @include typo_caption;
+}
+.overline {
+  @include typo_overline;
+}
+
+.typo_h4{
+  display: block;
+  margin: 0.5em 0
+}
+
+p {
+  @include typo_body1;
+
+  line-height: 1.9;
+  margin: 0 0 0.5rem;
+}

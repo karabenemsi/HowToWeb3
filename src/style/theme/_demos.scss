@@ -1,0 +1,198 @@
+.colordemo{
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  margin-left: 5rem;
+}
+
+.demodiv{
+  height: 10rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.small-demo-div{
+  height: 5rem;
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.demo-large-pad-mar {
+  box-sizing: border-box;
+  height: 40rem;
+  width: 40rem;
+  margin: 3rem 0;
+  background: #2D5593;
+  div{
+    margin: 0;
+    height: 50%;
+    width: 50%;
+    p{
+      padding: 2rem 0;
+      text-align: center;
+    }
+  }
+}
+
+.bg_blue, .pclassfocus {
+  background: #2D5593;
+}
+
+.bg_red {
+  background: #FF5B4A;
+}
+
+.bg_yellow {
+  background: #FFC800;
+}
+
+.bg_blue2 {
+  background: #578CA9;
+}
+
+p.prefix {
+  font-family: 'Roboto Sans', monospace;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  letter-spacing: 0.1rem;
+}
+
+.shadowdemo1 .calendar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 10%;
+}
+
+.shadowdemo1 .calendar .day {
+  border-radius: 1rem;
+  display: inline-block;
+  box-shadow: 0 0 1rem rgba(30, 30, 30, .6);
+  height: 30rem;
+  width: 20rem;
+  background: #efefef;
+}
+
+.shadowdemo1 .calendar .day h2 {
+  border-radius: 1rem 1rem 0 0;
+  width: 20rem;
+  margin: 0;
+  height: 20rem;
+  text-align: center;
+  font-size: 12rem;
+  padding: 8rem 0;
+  color: white;
+  text-shadow: 0 0 2rem rgba(0, 0, 0, .6);
+  box-shadow: inset 0 0 4rem rgba(250, 250, 250, .1);
+}
+
+.shadowdemo1 .calendar .day p {
+  width: 100%;
+  height: 10rem;
+  padding: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.shadowdemo1 .calendar.calNoShadow .day {
+  box-shadow: none;
+}
+
+.shadowdemo1 .calendar.calNoShadow .day h2 {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.pclasshover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  padding: 40px 0;
+  padding: 2.5rem 0;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.pclasshover:hover {
+  background: #2D5593;
+  color: #FFC800;
+}
+
+.pclassfocus {
+  padding: 40px 25%;
+  padding: 2.5rem 25%;
+}
+
+.pclassfocus input {
+  color: #578CA9;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #578CA9;
+  width: 100%;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  padding: 4.8px 8px;
+  padding: 0.3rem 0.5rem;
+}
+
+.pclassfocus input:focus {
+  border: none;
+  border-bottom: 3px solid #FFC800;
+  background: #578CA9;
+  color: #FFC800;
+  box-shadow: none;
+}
+
+.pelementsdemo::before {
+  content: 'before';
+  background: yellow;
+}
+
+.pelementsdemo::after {
+  content: 'after';
+  background: yellow;
+}
+
+.pelementsdemo p::-moz-selection {
+  color: #89adf8;
+  background: #484654;
+}
+
+.pelementsdemo p::selection {
+  color: #89adf8;
+  background: #484654;
+}
+
+.transMit, .transOhne {
+  padding: 40px 0;
+  padding: 2.5rem 0;
+  background: #2D5593;
+  color: #95DEE2;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.transMit:hover, .transOhne:hover {
+  border-radius: 4rem;
+  background: #142642;
+  color: #FFC800;
+  padding: 8px 0;
+  padding: .5rem 0;
+}
+
+.transMit:hover p, .transOhne:hover p {
+  font-size: 64px;
+  font-size: 4rem;
+}
+
+.transMit {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+.transMit p {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}

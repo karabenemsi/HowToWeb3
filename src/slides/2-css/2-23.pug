@@ -1,0 +1,29 @@
+section
+  section
+    h2 Pseudo-Elemente
+    pre
+      code.css.background.
+        div::before {}
+        
+        div::after {}
+                              
+        ::selection {}
+        
+        ::root{}
+    
+  section
+    pre
+      code.css.background.
+        .watchthis::before, watchthis::after {
+          content: 'before';
+          background: yellow;
+        }
+        .watchthis::after {
+          content: 'after';
+        }
+        .watchthis::selection {
+          color: #89adf8;
+          background: #484654;
+        }
+    .pelementsdemo
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque consequuntur quisquam quia ea est quae blanditiis dolor sunt sed exercitationem accusamus itaque explicabo provident ipsam doloribus dolore, minus hic.

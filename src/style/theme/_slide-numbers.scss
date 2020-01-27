@@ -1,0 +1,37 @@
+.reveal .slide-number {
+  position: absolute;
+  display: block;
+  z-index: 31;
+  // font-family: Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  top: -2rem;
+  right: -5rem;
+  width: 14rem;
+  // height: 8rem;
+  // color: #fff;
+  background-color: color(primary);
+  padding: 5rem 0.75em 0.75em;
+  text-align: center;
+  // clip-path: polygon(100% 0, 0 0, 100% 100%);
+  transform: rotate(45deg);
+  // box-shadow: 0 0 3rem rgba(0,0,0,0.5);
+}
+
+.reveal [class^="slide-number-"] {
+  color: contrast(primary);
+
+  // position: absolute;
+  // right: 1rem;
+  // top: 1rem;
+  // background: pink;
+  line-height: 1;
+  display: inline;
+  // width: 3.5rem;
+  text-align: right;
+  // color: currentColor;
+}
+
+.reveal .slide-number-delimiter {
+  margin: 0 3px;
+}

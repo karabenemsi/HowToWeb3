@@ -1,0 +1,1012 @@
+- var notes = ''
+section(data-notes=notes)
+  section
+    h2 weitere elemente
+  section.more-elements
+    ul.reflisttags
+      li
+        code abbr
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;abbr&gt;
+          p Definiert eine Abkürzung oder ein Akronym Bsp: "ASAP", "MfG", "WHO"
+          p Gibt Browsern, Suchmaschinen und Übersetzern hilfreiche Informationen
+          //- pre
+          //-   code.html.
+          //-     The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948.
+      li
+        code address
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;address&gt;
+          p Definiert die Kontaktinformationen für den Artikel/die Seite. Im 
+            code &lt;article&gt;
+            | angegeben definiert er die Informationen für den Artikel, sonst für die Seite.
+          //- pre
+          //-   code.html.
+          //-     &lt;address&gt;
+          //-       Written by &lt;a href="mailto:webmaster@example.com"&gt;Jon Doe&lt;/a&gt;.&lt;br&gt; 
+          //-       Visit us at:&lt;br&gt;
+          //-       Example.com&lt;br&gt;
+          //-       Box 564, Disneyland&lt;br&gt;
+          //-       USA
+          //-     &lt;/address&gt;
+      li
+        code area
+        .description(data-open="false") 
+          //- h3
+          //-   code &lt;area&gt;
+          p Beschreibt einen Bereich in einer image-map das Element ist immer in einer 
+            code &lt;map&gt; 
+            | verschachtelt.
+          //- pre
+          //-   code.html.
+          //-     &lt;img src="planets.gif" width="145" height="126" alt="Planets"
+          //-       usemap="#planetmap"&gt;
+
+          //-     &lt;map name="planetmap"&gt;
+          //-       &lt;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&gt;
+          //-       &lt;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&gt;
+          //-       &lt;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&gt;
+          //-     &lt;/map&gt;
+      li
+        code article
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;article&gt;
+          p Der 
+            code &lt;article&gt;
+            | tag spezifiziert unabhängingen, selbstständigen Inhalt. Ein  Artikel sollte ohne Zusätze Sinn ergeben und es sollte moglich sein ihn vom Rest der Seite trennnen zu können.
+          //- pre
+          //-   code.html.
+          //-     &lt;article&gt;
+          //-       &lt;h1&gt;Google Chrome&lt;/h1&gt;
+          //-       &lt;p&gt;Google Chrome is a free, open-source web browser developed by Google.&lt;/p&gt;
+          //-     &lt;/article&gt;
+      li
+        code aside
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;aside&gt;
+          p Der 
+            code &lt;aside&gt;
+            | tag definiert Inhalt abseits von dem ihn enthaltenen Umfeld. Er sollte inhaltlich zur Umgebung passen.
+          //- pre
+          //-   code.html.
+          //-     &lt;p&gt;My family and I visited The Epcot center this summer.&lt;/p&gt;
+
+          //-     &lt;aside&gt;
+          //-       &lt;h4&gt;Epcot Center&lt;/h4&gt;
+          //-       &lt;p&gt;The Epcot Center is a theme park in Disney World, Florida.&lt;/p&gt;
+          //-     &lt;/aside&gt;
+        
+      li
+        code audio
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;audio&gt;
+          p Definiert Ton so wie Musik oder andere Audiostreams
+          pre
+            //- code.html.
+            //-   &lt;audio controls&gt;
+            //-     &lt;source src="horse.ogg" type="audio/ogg"&gt;
+            //-     &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+            //-     Your browser does not support the audio tag.
+            //-   &lt;/audio&gt; 
+              
+        
+      li
+        code base
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;base&gt;
+          p Definiert eine Standarturl und ein Standarttarget für alle Links auf der Seite
+          //- pre
+          //-   code.html.
+          //-     &lt;head&gt;
+          //-       &lt;base href="https://www.w3schools.com/images/" target="_blank"&gt;
+          //-     &lt;/head&gt;
+
+          //-     &lt;body&gt;
+          //-       &lt;img src="stickman.gif" width="24" height="39" alt="Stickman"&gt;
+          //-       &lt;a href="https://www.w3schools.com"&gt;W3Schools&lt;/a&gt;
+          //-     &lt;/body&gt; 
+        
+      li
+        code bdi
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;bdi&gt;
+          p BDI steht für
+            b B
+            | i-
+            b D
+            | irectional 
+            b I
+            | solation. Der
+            code &lt;bdi&gt;
+            | tag isoliert einen Teil eines Textes der bei der Änderung der Textrichtung anders formattiert wird. Seine Textrichtung wird beibehalten
+          //- pre
+          //-   code.html.
+          //-     &lt;ul&gt;
+          //-       &lt;li&gt;User &lt;bdi&gt;hrefs&lt;/bdi&gt;: 60 points&lt;/li&gt;
+          //-       &lt;li&gt;User &lt;bdi&gt;jdoe&lt;/bdi&gt;: 80 points&lt;/li&gt;
+          //-       &lt;li&gt;User &lt;bdi&gt;????&lt;/bdi&gt;: 90 points&lt;/li&gt;
+          //-     &lt;/ul&gt;
+              
+        
+      li
+        code bdo
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;bdo&gt;
+          p BDO steht für 
+            b B
+            | i-
+            b D
+            | irectional 
+            b O
+            | verwrite. Damit wird die die aktuelle Textrichtung überschrieben
+          //- pre
+          //-   code.html.
+          //-     &lt;bdo dir="rtl"&gt;
+          //-       This text will go right-to-left.
+          //-     &lt;/bdo&gt; 
+              
+        
+      li
+        code blockquote
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;blockquote&gt;
+          p Ein Abschnitt, von einer anderen Quelle zitiert wird.
+          //- pre
+          //-   code.html.
+          //-     &lt;blockquote&gt;
+          //-       Niemand hat vor eine Mauer zu bauen - Bob der Baumeister
+          //-     &lt;/blockquote&gt;
+              
+        
+      li
+        code button
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;button&gt;
+          p Definiert einen klickbaren Knopf. Er unterscheidet sich von einem Knopf aus einem 
+            code &lt;input&gt;
+            | -Element dadurch, dass hier auch Texte oder Bilder eingefügt werden können.
+          //- pre
+          //-   code.html.
+          //-     &lt;button type="button"&gt;Click Me!&lt;/button&gt;
+              
+        
+      li
+        code canvas
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;canvas&gt;
+          p Auf einem Canvas kann live gemalt werden. Dies geschieht per JavaScript.
+          //- pre
+          //-   code.html.
+          //-     &lt;canvas id="myCanvas"&gt;&lt;/canvas&gt;
+
+          //-     &lt;script&gt;
+          //-       var canvas = document.getElementById("myCanvas");
+          //-       var ctx = canvas.getContext("2d");
+          //-       ctx.fillStyle = "#FF0000";
+          //-       ctx.fillRect(0, 0, 80, 80);
+          //-       &lt;/script&gt; 
+              
+        
+      li
+        code caption
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;caption&gt;
+          p Definiert eine Bezeichnung für eine Tabelle.
+          //- pre
+          //-   code.html.
+          //-     &lt;table&gt;
+          //-       &lt;caption&gt;Monthly savings&lt;/caption&gt;
+          //-       &lt;tr&gt;
+          //-         &lt;th&gt;Month&lt;/th&gt;
+          //-         &lt;th&gt;Savings&lt;/th&gt;
+          //-       &lt;/tr&gt;
+          //-       &lt;tr&gt;
+          //-         &lt;td&gt;January&lt;/td&gt;
+          //-           &lt;td&gt;$100&lt;/td&gt;
+          //-         &lt;/tr&gt;
+          //-     &lt;/table&gt; 
+              
+        
+      li
+        code cite
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;cite&gt;
+          p Definiert den Namen/Titel eines Werks (z.B. Ein Bild, ein Lied ...)
+          //- pre
+          //-   code.html.
+          //-     &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edward Munch. Painted in 1893.&lt;/p&gt; 
+        
+      li
+        code code
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;code&gt;
+          p Enthält Computercode
+          //- pre
+          //-   code.html.
+          //-     &lt;code&gt;&lt;code&gt;&lt;/code&gt;
+            
+        
+      li
+        code data
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;data&gt;
+          p The &lt;data&gt; tag links the given content with a machine-readable translation. This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;ul&gt;
+          //-       &lt;li&gt;&lt;data value="21053"&gt;Cherry Tomato&lt;/data&gt;&lt;/li&gt;
+          //-       &lt;li&gt;&lt;data value="21054"&gt;Beef Tomato&lt;/data&gt;&lt;/li&gt;
+          //-       &lt;li&gt;&lt;data value="21055"&gt;Snack Tomato&lt;/data&gt;&lt;/li&gt;
+          //-     &lt;/ul&gt; 
+        
+      li
+        code datalist
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;datalist&gt;
+          p The &lt;datalist&gt; tag specifies a list of pre-defined options for an &lt;input&gt; element. The &lt;datalist&gt; tag is used to provide an "autocomplete" feature on &lt;input&gt; elements. Users will see a drop-down list of pre-defined options as they input data. Use the &lt;input&gt; element's list attribute to bind it together with a &lt;datalist&gt; element.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;input list="browsers"&gt;
+
+          //-     &lt;datalist id="browsers"&gt;
+          //-         &lt;option value="Internet Explorer"&gt;
+          //-         &lt;option value="Firefox"&gt;
+          //-         &lt;option value="Chrome"&gt;
+          //-         &lt;option value="Opera"&gt;
+          //-         &lt;option value="Safari"&gt;
+          //-     &lt;/datalist&gt; 
+                          
+      li
+        code dd
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;dd&gt;
+          p The &lt;dd&gt; tag is used to describe a term/name in a description list. The &lt;dd&gt; tag is used in conjunction with &lt;dl&gt; (defines a description list) and &lt;dt&gt; (defines terms/names). Inside a &lt;dd&gt; tag you can put paragraphs, line breaks, images, links, lists, etc.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;dl&gt;
+          //-       &lt;dt&gt;Coffee&lt;/dt&gt;
+          //-       &lt;dd&gt;Black hot drink&lt;/dd&gt;
+          //-       &lt;dt&gt;Milk&lt;/dt&gt;
+          //-       &lt;dd&gt;White cold drink&lt;/dd&gt;
+          //-     &lt;/dl&gt; 
+        
+      li
+        code details
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;details&gt;
+          p The &lt;details&gt; tag specifies additional details that the user can view or hide on demand. The &lt;details&gt; tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the &lt;details&gt; tag. The content of a &lt;details&gt; element should not be visible unless the open attribute is set.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;details&gt;
+          //-       &lt;summary&gt;Copyright 1999-2014.&lt;/summary&gt;
+          //-       &lt;p&gt; - by Refsnes Data. All Rights Reserved.&lt;/p&gt;
+          //-       &lt;p&gt;All content and graphics on this web site are the property of Refsnes&lt;/p&gt;
+          //-     &lt;/details&gt; 
+              
+        
+      li
+        code dfn
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;dfn&gt;
+          p The &lt;dfn&gt; tag represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the &lt;dfn&gt; tag must also contain the definition/explanation for the term inside &lt;dfn&gt;.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;
+        
+      li
+        code dialog
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;dialog&gt;
+          p The &lt;dialog&gt; tag defines a dialog box or window. The &lt;dialog&gt; element makes it easy to create popup dialogs and modals on a web page.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;th&gt;January &lt;dialog open&gt;This is an open dialog window&lt;/dialog&gt;&lt;/th&gt;
+        
+      li
+        code dt
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;dt&gt;
+          p The &lt;dt&gt; tag defines a term/name in a description list. The &lt;dt&gt; tag is used in conjunction with &lt;dl&gt; (defines a description list) and &lt;dd&gt; (describes each term/name).
+
+          //- pre
+          //-   code.html.
+          //-     &lt;dl&gt;
+          //-       &lt;dt&gt;Coffee&lt;/dt&gt;
+          //-       &lt;dd&gt;Black hot drink&lt;/dd&gt;
+          //-       &lt;dt&gt;Milk&lt;/dt&gt;
+          //-       &lt;dd&gt;White cold drink&lt;/dd&gt;
+          //-     &lt;/dl&gt;   
+        
+      li
+        code dl
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;dl&gt;
+          p The &lt;dl&gt; tag defines a description list. The &lt;dl&gt; tag is used in conjunction with &lt;dt&gt; (defines terms/names) and &lt;dd&gt; (describes each term/name).
+
+          //- pre
+          //-   code.html.
+          //-     &lt;dl&gt;
+          //-       &lt;dt&gt;Coffee&lt;/dt&gt;
+          //-       &lt;dd&gt;Black hot drink&lt;/dd&gt;
+          //-       &lt;dt&gt;Milk&lt;/dt&gt;
+          //-       &lt;dd&gt;White cold drink&lt;/dd&gt;
+          //-     &lt;/dl&gt; 
+                        
+      li
+        code embed
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;embed&gt;
+          p Definiert einen Container für eine externe Anwendung oder interaktiven Inhalt.
+          //- pre
+          //-   code.html.
+          //-     &lt;embed src="helloworld.swf"&gt; 
+        
+      li
+        code fieldset
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;fieldset&gt;
+          p Wird benutzt um zueinander gehörende Elemente in einem Formular zu gruppieren
+          //- pre
+          //-   code.html.
+          //-     &lt;form&gt;
+          //-       &lt;fieldset&gt;
+          //-         &lt;legend&gt;Personalia:&lt;/legend&gt;
+          //-         Name: &lt;input type="text"&gt;&lt;br&gt;
+          //-         Email: &lt;input type="text"&gt;&lt;br&gt;
+          //-         Date of birth: &lt;input type="text"&gt;
+          //-       &lt;/fieldset&gt;
+          //-     &lt;/form&gt; 
+              
+        
+      li
+        code figcaption
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;figcaption&gt;
+          p The &lt;figcaption&gt; tag defines a caption for a &lt;figure&gt; element. The &lt;figcaption&gt; element can be placed as the first or last child of the &lt;figure&gt; element.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;figure&gt;
+          //-       &lt;img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228"&gt;
+          //-       &lt;figcaption&gt;Fig1. - A view of the pulpit rock in Norway.&lt;/figcaption&gt;
+          //-     &lt;/figure&gt; 
+              
+        
+      li
+        code figure
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;figure&gt;
+          p Das &lt;figure&gt; -Tag legt in sich geschlossene Inhalte wie Illustrationen, Diagramme, Fotos, Codelisten usw. fest. Während der Inhalt des &lt;figure&gt; -Elements mit dem Hauptfluss zusammenhängt, ist seine Position unabhängig vom Hauptfluss, und wenn es entfernt wird, sollte dies den Fluss des Dokuments nicht beeinflussen.
+          //- pre
+          //-   code.html.
+          //-     &lt;figure&gt;
+          //-       &lt;img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228"&gt;
+          //-     &lt;/figure&gt; 
+        
+      li
+        code footer
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;footer&gt;
+          p Definiert eine Fußzeile für eine Dokument oder einen Abschnitt und enthält weiterführende Informationen
+          //- pre
+          //-   code.html.
+          //-     &lt;footer&gt;
+          //-       &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;
+          //-       &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt;
+          //-         someone@example.com&lt;/a&gt;.&lt;/p&gt;
+          //-     &lt;/footer&gt; 
+              
+        
+      li
+        code header
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;header&gt;
+          p Das header-Element ist ein Container für einleitenden Inhalt oder Navigationslinks
+          //- pre
+          //-   code.html.
+          //-     &lt;article&gt;
+          //-       &lt;header&gt;
+          //-         &lt;h1&gt;Most important heading here&lt;/h1&gt;
+          //-         &lt;h3&gt;Less important heading here&lt;/h3&gt;
+          //-         &lt;p&gt;Some additional information here&lt;/p&gt;
+          //-       &lt;/header&gt;
+          //-       &lt;p&gt;Lorem Ipsum dolor set amet....&lt;/p&gt;
+          //-     &lt;/article&gt; 
+              
+        
+      li
+        code hr
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;hr&gt;
+          p Definiert einen Themenwechsel in einer Seite.
+          //- pre
+          //-   code.html.
+          //-     &lt;h1&gt;HTML&lt;/h1&gt;
+          //-       &lt;p&gt;HTML is a language for describing web pages.....&lt;/p&gt;
+
+          //-       &lt;hr&gt;
+
+          //-       &lt;h1&gt;CSS&lt;/h1&gt;
+          //-     &lt;p&gt;CSS defines how to display HTML elements.....&lt;/p&gt; 
+              
+        
+      li
+        code iframe
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;iframe&gt;
+          p Ein Inline-Frame. Hier wird ein anderes Dokument eingebunden.
+          //- pre
+          //-   code.html.
+          //-     &lt;iframe src="https://www.w3schools.com"&gt;&lt;/iframe&gt;
+        
+      li
+        code kbd
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;kbd&gt;
+          p Tastatureingabe
+          //- pre
+          //-   code.html.
+          //-     &lt;kbd&gt;Leertaste&lt;/kbd&gt; 
+              
+        
+      li
+        code label
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;label&gt;
+          p The &lt;label&gt; tag defines a label for an &lt;input&gt; element. The &lt;label&gt; element does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the &lt;label&gt; element, it toggles the control. The for attribute of the &lt;label&gt; tag should be equal to the id attribute of the related element to bind them together.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;label for="male"&gt;Male&lt;/label&gt;
+          //-     &lt;input type="radio" name="gender" id="male" value="male"&gt;
+              
+      li
+        code legend
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;legend&gt;
+          p The &lt;legend&gt; tag defines a caption for the &lt;fieldset&gt; element.
+          //- pre
+          //-   code.html.
+          //-     &lt;fieldset&gt;
+          //-       &lt;legend&gt;Personalia:&lt;/legend&gt;
+              
+        
+      li
+        code link
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;link&gt;
+          p The &lt;link&gt; tag defines a link between a document and an external resource. The &lt;link&gt; tag is used to link to external style sheets.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;head&gt;
+          //-         &lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;
+          //-     &lt;/head&gt; 
+              
+        
+      li
+        code main
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;main&gt;
+          p The &lt;main&gt; tag specifies the main content of a document. The content inside the &lt;main&gt; element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms. There must not be more than one &lt;main&gt; element in a document. The &lt;main&gt; element must NOT be a descendant of an &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;header&gt;, or &lt;nav&gt; element.
+
+          pre
+            //- code.html.
+            //-   &lt;main&gt;
+            //-     &lt;h1&gt;Web Browsers&lt;/h1&gt;
+            //-     &lt;p&gt;Google Chrome, Firefox, and Internet Explorer are the most used browsers today.&lt;/p&gt;
+
+            //-     &lt;article&gt;
+            //-       &lt;h1&gt;Google Chrome&lt;/h1&gt;
+            //-       &lt;p&gt;Google Chrome is a free, open-source web browser developed by Google,
+            //-       released in 2008.&lt;/p&gt;
+            //-     &lt;/article&gt;
+
+              
+        
+      li
+        code map
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;map&gt;
+          p The &lt;map&gt; tag is used to define a client-side image-map. An image-map is an image with clickable areas. The required name attribute of the &lt;map&gt; element is associated with the &lt;img&gt;'s usemap attribute and creates a relationship between the image and the map. The &lt;map&gt; element contains a number of &lt;area&gt; elements, that defines the clickable areas in the image map.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"&gt;
+
+          //-     &lt;map name="planetmap"&gt;
+          //-         &lt;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&gt;
+          //-         &lt;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&gt;
+          //-         &lt;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&gt;
+          //-     &lt;/map&gt;
+              
+        
+      li
+        code mark
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;mark&gt;
+          p The &lt;mark&gt; tag defines marked text. Use the &lt;mark&gt; tag if you want to highlight parts of your text.
+          
+          //- pre
+          //-   code.html.
+          //-     &lt;p&gt;Do not forget to buy &lt;mark&gt;milk&lt;/mark&gt; today.&lt;/p&gt;
+        
+      li
+        code menu
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;menu&gt;
+          p (Only Firefox) The &lt;menu&gt; tag defines a list/menu of commands. The &lt;menu&gt; tag is used for context menus, toolbars and for listing form controls and commands.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;menu type="context" id="mymenu"&gt;
+          //-       &lt;menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"&gt;
+          //-       &lt;/menuitem&gt;
+          //-     &lt;/menu&gt;
+              
+        
+      li
+        code menuitem
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;menuitem&gt;
+          p (Only Firefox) The &lt;menuitem&gt; tag defines a command/menu item that the user can invoke from a popup menu.
+          //- pre
+          //-   code.html.
+          //-     &lt;menu type="context" id="mymenu"&gt;
+          //-       &lt;menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"&gt;
+          //-       &lt;/menuitem&gt;
+          //-     &lt;/menu&gt;               
+        
+      li
+        code meta
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;meta&gt;
+          p Metadata is data (information) about data. The &lt;meta&gt; tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines (keywords), or other web services.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;head&gt;
+          //-       &lt;meta charset="UTF-8"&gt;
+          //-       &lt;meta name="description" content="Free Web tutorials"&gt;
+          //-       &lt;meta name="keywords" content="HTML,CSS,XML,JavaScript"&gt;
+          //-       &lt;meta name="author" content="John Doe"&gt;
+          //-       &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          //-     &lt;/head&gt; 
+              
+        
+      li
+        code meter
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;meter&gt;
+          p The &lt;meter&gt; tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge. Examples: Disk usage, the relevance of a query result, etc.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt;&lt;br&gt;
+          //-     &lt;meter value="0.6"&gt;60%&lt;/meter&gt;
+        
+      li
+        code nav
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;nav&gt;
+          p The &lt;nav&gt; tag defines a set of navigation links. Notice that NOT all links of a document should be inside a &lt;nav&gt; element. The &lt;nav&gt; element is intended only for major block of navigation links. Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;nav&gt;
+          //-       &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
+          //-       &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
+          //-       &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
+          //-       &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;
+          //-     &lt;/nav&gt;
+        
+      li
+        code noscript
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;noscript&gt;
+          p The &lt;noscript&gt; tag defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script. The &lt;noscript&gt; element can be used in both &lt;head&gt; and &lt;body&gt;.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;script&gt;
+          //-       document.write("Hello World!")
+          //-     &lt;/script&gt;
+          //-     &lt;noscript&gt;Your browser does not support JavaScript!&lt;/noscript&gt; 
+              
+        
+      li
+        code object
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;object&gt;
+          p The &lt;object&gt; tag defines an embedded object within an HTML document. Use this element to embed multimedia (like audio, video, Java applets, ActiveX, PDF, and Flash) in your web pages. You can also use the &lt;object&gt; tag to embed another webpage into your HTML document.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;object width="400" height="400" data="helloworld.swf"&gt;&lt;/object&gt; 
+        
+      li
+        code optgroup
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;optgroup&gt;
+          p The &lt;optgroup&gt; is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;select&gt;
+          //-       &lt;optgroup label="Swedish Cars"&gt;
+          //-         &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+          //-         &lt;option value="saab"&gt;Saab&lt;/option&gt;
+          //-       &lt;/optgroup&gt;
+          //-     &lt;/select&gt;
+              
+        
+      li
+        code option
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;option&gt;
+          p The &lt;option&gt; tag defines an option in a select list.
+          //- pre
+          //-   code.html.
+          //-     &lt;select&gt;
+          //-       &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+          //-       &lt;option value="saab"&gt;Saab&lt;/option&gt;
+          //-     &lt;/select&gt;
+              
+        
+      li
+        code output
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;output&gt;
+          p The &lt;output&gt; tag represents the result of a calculation (like one performed by a script)
+          //- pre
+          //-   code.html.
+          //-     &lt;form oninput="x.value=parseInt(a.value)+parseInt(b.value)"&gt;0
+          //-       &lt;input type="range" id="a" value="50"&gt;100
+          //-       +&lt;input type="number" id="b" value="50"&gt;
+          //-       =&lt;output name="x" for="a b"&gt;&lt;/output&gt;
+          //-     &lt;/form&gt; 
+                  
+              
+        
+      li
+        code param
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;param&gt;
+          p Wird benutzt um Parameter für Plugins bereitzustellen, die mit 
+            code &lt;object&gt;
+            |  eingebunden werden.
+          //- pre
+          //-   code.html.
+          //-     &lt;object data="horse.wav"&gt;
+          //-       &lt;param name="autoplay" value="true"&gt;
+          //-     &lt;/object&gt; 
+              
+        
+      li
+        code picture
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;picture&gt;
+          p The &lt;picture&gt; tag gives web developers more flexibility in specifying image resources.
+          p The most common use of the &lt;picture&gt; element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport.
+          //- p The &lt;picture&gt; element holds two different tags: one or more &lt;source&gt; tags and one &lt;img&gt; tag.
+          //- p The &lt;source&gt; element has the following attributes:
+          //- ul
+          //-   li srcset (required) - defines the URL of the image to show
+          //-   li media - accepts any valid media query that would normally be defined in a CSS
+          //-   li sizes - defines a single width descriptor, a single media query with width descriptor, or a comma-delimited list of media queries with a width descriptor
+          //-   li type - defines the MIME type
+          //- p The browser will use the attribute values to load the most appropriate image. 
+          //- The browser will use the first &lt;source&gt; element with a matching hint and ignore 
+          //- any following &lt;source&gt; tags.
+          //- p The &lt;img&gt; element is required as the last child tag of the &lt;picture&gt; declaration block. The &lt;img&gt; element is used to provide backward compatibility for browsers that do not support the &lt;picture&gt; element, or if none of the &lt;source&gt; tags matched.
+          //- p The &lt;picture&gt; element works similar to the &lt;video&gt; and &lt;audio&gt; elements. You set up different sources, and the first source that fits the preferences is the one being used.
+
+          //- pre
+          //-   code.html.
+          //-     &lt;picture&gt;
+          //-       &lt;source media="(min-width: 650px)" srcset="img_pink_flowers.jpg"&gt;
+          //-       &lt;source media="(min-width: 465px)" srcset="img_white_flower.jpg"&gt;
+          //-       &lt;img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"&gt;
+          //-     &lt;/picture&gt;
+        
+      li
+        code progress
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;progress&gt;
+          p The &lt;progress&gt; tag represents the progress of a task. 
+          //- pre
+          //-   code.html.
+          //-     &lt;progress value="22" max="100"&gt;&lt;/progress&gt; 
+        
+      li
+        code q
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;q&gt;
+          p The &lt;q&gt; tag defines a short quotation.
+          //- pre
+          //-   code.html.
+          //-     &lt;p&gt;WWF's goal is to: 
+          //-     &lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;
+          //-       We hope they succeed.&lt;/p&gt; 
+                
+      li
+        code s
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;s&gt;
+          p The &lt;s&gt; tag specifies text that is no longer correct, accurate or relevant.
+          //- pre
+          //-   code.html.
+          //-     &lt;p&gt;&lt;s&gt;My car is blue.&lt;/s&gt;&lt;/p&gt;
+          //-     &lt;p&gt;My new car is silver.&lt;/p&gt; 
+              
+        
+      li
+        code samp
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;samp&gt;
+          p It defines sample output from a computer program.
+          //- pre
+          //-   code.html.
+          //-     &lt;samp&gt;Sample output from a computer program&lt;/samp&gt;
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+        
+      li
+        code script
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;script&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code section
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;section&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code select
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;select&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code small
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;small&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code source
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;source&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code span
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;span&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code summary
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;summary&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code tbody
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;tbody&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code textarea
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;textarea&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code tfoot
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;tfoot&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code th
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;th&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code thead
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;thead&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code time
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;time&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code title
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;title&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code track
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;track&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code u
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;u&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code var
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;var&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code video
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;video&gt;
+          p
+          //- pre
+          //-   code.html.
+              
+        
+      li
+        code wbr
+        .description(data-open="false")
+          //- h3
+          //-   code &lt;wbr&gt;
+          p
+          //- pre
+          //-   code.html.
