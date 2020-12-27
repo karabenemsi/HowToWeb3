@@ -5,6 +5,10 @@ code {
   color: color(code-text);
   padding: 0.2rem 0.75rem;
   border-radius: 0.25rem;
+
+  &.no-bg{
+    background: none;
+  }
 }
 .reveal pre code {
   line-height: 1.6;

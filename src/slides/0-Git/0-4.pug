@@ -1,35 +1,40 @@
 section
   section(data-background="./img/0/sw.jpg").dark
     //- img(src="./img/0/20.svg", alt="" style="height:20rem; margin-bottom: 5rem")
-    h2 Die Mission: Imperium erstellen
+    h2 Die Mission: Ein Imperium aufbauen
     .subtitle1 Your Name Here Inc.
   section(data-background="./img/0/df-imperium.jpg")
-    //- h3 1. Sich selbst erfinden
+    h3 1. New tool, who dis?
     pre
       code.bash.background.
-        $ git config --global user.name "doofenhe"
-        $ git config --global user.email "heinz@doofenschmirtz.evil"
+        $ git config --global user.name "norm"
+        $ git config --global user.email "norm@doofenschmirtz.evil"
   section
-    h3 2. Am Markt anmelden
-    ol
-      li Goto: http://g11013744:3210
-      li Registrieren
-      li.fragment Repository erstellen
+    h3 Arbeit suchen
+    p.typo_h4 http://g11013744:3210
+    img.fragment(src="./img/0/screen_0.jpg")
+  section
+    //- p.typo_h4 Anmelden
+    p mit Windows-Kennwort
+    img.fragment(src="./img/0/screen_1.jpg")
+  section
+    //- p.typo_h4 Profil anpassen
+    img.fragment(src="./img/0/screen_2.jpg")
+  section
+    p.typo_h4 Repo(sitory) vom Chef suchen
+    img.fragment(src="./img/0/screen_3.jpg")
   section.dark(data-background="#282c34")
-
-    h3 3. Repository lokal kopieren
-    img(src="./img/0/19.svg", alt="" style="height:20rem;")
+    h3 3. Repo lokal clonen
     pre.fragment
-      code.bash.
+      code.bash.no-bg.
         $ C:\Users\doofenhe>
     pre.fragment
-      code.bash.
+      code.bash.no-bg.
         $ mkdir repos
     pre.fragment
-      code.bash.
+      code.bash.no-bg.
         $ cd repos
   section(data-notes="git config --global core.askpass")
-    img(src="./img/0/20.svg", alt="" style="height:20rem;")
     pre
       code.bash.background.
         $ git clone https://doofenhe@g11007630:3210/doofenhe/masterplan.git
@@ -39,7 +44,7 @@ section
         $ dir
 
   section(data-background="#282c34").dark
-    h3 4. Imperiumsplan erstellen
+    h3 4. Imperiumsplan ausarbeiten
     p masterplan.json
     pre
       code.json.
@@ -56,7 +61,7 @@ section
           ]
         }
   section(data-notes="Add to staging area")
-    h3 5. Plan ofizell machen
+    h3 5. Sich festlegen
     pre
       code.bash.background.
         $ git status
@@ -84,19 +89,15 @@ section
         new file: masterplan.json
     pre.fragment
       code.bash.background.
-        $ git commit -m 'Initial commit'
+        $ git commit -m 'Norms Idea'
         [master (root-commit) 449da69] Initial commit
         1 file changed, 12 insertions(+)
         create mode 100644 masterplan.json
   section
     img(src="./img/0/8.svg", alt="")
 
-
   section(data-background="#C1FF9E")
-    h3 6. An den Masterserver senden
-    img(src="./img/0/15.svg", alt="")
-  section(data-background="#C1FF9E")
-    h3 7. Online arbeiten
+    h3 7. Zum Server senden
   section
     pre
       code.bash.background.
