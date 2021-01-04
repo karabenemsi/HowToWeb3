@@ -1,0 +1,122 @@
+section
+  section
+    h2 Text
+    pre
+      code.css.background.
+        p { text-decoration: none; /* overline | line-through | underline */
+    +preview-slim("height: 1.25em")
+      style.
+        p {font-size: 2rem}
+      p Lorem ipsum
+        span(style="text-decoration: overline")  Lorem ipsum
+        span(style="text-decoration: line-through")  dolor sit
+        span(style="text-decoration: underline")  amet, consectetur adipisici
+    pre
+      code.css.background.
+        p { text-transform: uppercase; /* lowercase | capitalize*/ }
+    +preview-slim("height: 1.25em")
+      style.
+        p {font-size: 2rem}
+      p Lorem ipsum
+        span(style="text-transform: uppercase")  dolor sit 
+        span(style="text-transform: lowercase") amet. Ut 
+        span(style="text-transform: capitalize") enim ad minim
+    pre
+      code.css.background.
+        p { text-indent: 50px; }
+    +preview-slim("height: 2em")
+      style.
+        p {font-size: 2rem}
+      p(style="text-indent: 80px") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+  section
+    pre
+      code.css.background.
+        p { line-height: 1.3; }
+    +preview-slim("height: 1.25em")
+      style.
+        p {font-size: 2rem}
+      p(style="line-height: 0.3") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    pre
+      code.css.background.
+        p { letter-spacing: 20px; }
+    +preview-slim("height: 1.25em")
+      style.
+        p {font-size: 2rem}
+      p(style="letter-spacing: 20px") Lorem ipsum dolor sit amet.
+    pre
+      code.css.background.
+        p { color: #985232 }
+    +preview-slim("height: 2em")
+      style.
+        p {font-size: 2rem}
+      p(style="color: #985232")  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem temporibus alias enim incidunt dolor vel distinctio molestiae perferendis obcaecati ex.
+    
+  section
+    pre
+      code.css.background.
+        p { text-align: left; /* right | center | justify */ }
+    +preview-slim("height: 8em")
+      style.
+        p {font-size: 2rem; line-height: 1}
+      p Lorem ipsum
+      p(style="text-align: left")  dolor sit 
+      p(style="text-align: right") amet. Ut 
+      p(style="text-align: center") enim ad minim
+      p(style="text-align: justify") enim ad minim
+    pre
+      code.css.background.
+        p { word-spacing: 120px; }
+    +preview-slim("height: 2em")
+      style.
+        p {font-size: 2rem}
+      p(style="word-spacing: 120px")  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reiciendis unde tempora! Amet facilis, porro enim autem nobis incidunt voluptatibus!
+
+  section(data-background="#282c34").dark
+    .split
+      .left
+        h4 style.css
+        pre
+          code.css.
+            h1 {
+              background: green;
+              color: white;
+              text-transform: uppercase;
+            }
+            p {
+             line-height: 1.5;
+             color: #232323;
+             text-align: justify;
+            }
+      .right
+        +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:true},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+          style.
+          
+            h1 {
+              background: green;
+              color: white;
+              text-transform: uppercase;
+            }
+            p {
+             line-height: 1.5;
+             color: #232323;
+             text-align: justify;
+            }
+          h1  Doofenshmirtz Evil Incorporated
+          p Lorem ipsum dolor sit amet, modus regione labitur te quo, at noluisse signiferumque vim, ex ornatus habemus propriae vel. At quodsi similique forensibus vim, iriure gloriatur dissentias ea mei. Eos te quod solum. Et has unum commodo fuisset. Eam at viris putent explicari.</p>
+          h2 Erfindungen (chronologisch)
+          ol
+            li Magnetism Magnifier
+            li Destruct-inator
+            li Giant Robot
+            li Deflate-inator
+            li Age Accelerator-inator
+            li Slave-inator
+            li Drill-inator
+          h2 Weitere Erfindungen
+          ul
+            li Copy and Paste-Inator
+            li Melt-inator 6-5000
+            li Wood-inator
+          p Nam facer novum sonet ea, nam iriure consetetur et. Ne nulla ubique per, dicunt reprimique te mel. Omittantur efficiantur ius et, usu in habeo facer inani, docendi liberavisse instructior in mei. Qui choro ignota ei, wisi ipsum nam ne. Mollis recusabo eu his, ea hinc volutpat definiebas duo.
+          p Est in mundi tollit, nam et dicunt contentiones, ex usu audire diceret facilisis. Eum viderer corpora sadipscing ut, eu ius aeterno integre, mei ex libris perpetua comprehensam. Errem tamquam pertinax no vis, eum velit suavitate an, est populo option at. Id sea utamur regione democritum, ea utroque laboramus eam. Nostrum quaestio no has, cu pri aperiam oblique habemus. An moderatius omittantur definitiones sit.

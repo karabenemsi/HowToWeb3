@@ -1,0 +1,134 @@
+- var notes = ''
+section(data-notes=notes)
+  section
+    h2 id="id-klassen" class="abschnitt"
+  section(data-background="#282c34").dark
+     .split
+      .left
+        h4 html
+        pre
+          code.html.
+            &lt;div id="erste-box" class="box"&gt;
+              &lt;p&gt;Lorem, ipsum dolor.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div id="zweite-box" class="box rot"&gt;
+              &lt;p&gt;Lorem, ipsum dolor.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div id="dritte-box" class="gruen"&gt;
+              &lt;p&gt;Lorem, ipsum dolor.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;p class="rot"&gt;
+              Lorem ipsum dolor sit amet.
+            &lt;/p&gt;
+      .right
+        h4 css
+        pre
+          code.css.
+            #erste-box {
+              font-size: 5px;
+            }
+            #zweite-box {
+              font-size: 20px;
+            }
+            #dritte-box {
+              font-size: 30px;
+            }
+            .rot {
+              color:red;
+            }
+            .gruen {
+              color:green;
+            }
+  
+  section(data-background="#282c34").dark
+    .split
+      .left
+        h4 style.css
+        pre
+          code.css.
+            body{
+              margin: 0;
+            }
+            h1 {
+              background: green;
+              color: white;
+              font-size: 2.5em;
+              font-family: cursive;
+              text-align: center;
+            }
+            p {
+              text-align: justify;
+              font-family: sans-serif;
+            }
+            .content {
+              font-size: 1.5rem;
+            }
+      .right
+        h4 index.html
+        pre
+          code.html.
+            &lt;!doctype html&gt;
+            &lt;html lang="de"&gt;
+              &lt;head&gt;...&lt;/head&gt;
+              &lt;body&gt;
+                &lt;h1&gt;Doofenshmirtz Evil Incorporated&lt;/h1&gt;
+                  &lt;nav&gt;...&lt;/nav&gt;
+                  &lt;div class="content"&gt;
+                    &lt;p&gt;Lorem ipsum ... explicari.&lt;/p&gt;&lt;/p&gt;
+                    &lt;h2&gt;Erfindungen (chronologisch)&lt;/h2&gt;
+                    &lt;ol&gt;...&lt;/ol&gt;
+                    &lt;h2&gt;Weitere Erfindungen&lt;/h2&gt;
+                    &lt;ul&gt;...&lt;/ul&gt;
+                    &lt;p&gt;Nam facer novum sonet ea, ... duo.&lt;/p&gt;
+                    &lt;p&gt;Est in mundi tollit, nam ... sit.&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+  section
+    +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:true},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+      style.
+        body{
+          margin: 0;
+        }
+        h1 {
+          background: green;
+          color: white;
+          font-size: 2.5em;
+          font-family: cursive;
+          text-align: center;
+        }
+        p {
+          text-align: justify;
+          font-family: sans-serif;
+        }
+        .content {
+          font-size: 1.5rem;
+        }
+      h1 Doofenshmirtz Evil Incorporated
+      div.nav
+        ul
+          li
+            a(href="html/preise.html") Startseite
+          li
+            a(href="html/preise.html") Preise
+          li
+            a(tabindex="0" aria-current="page") Bilder
+      .content
+        p Lorem ipsum dolor sit amet, modus regione labitur te quo, at noluisse signiferumque vim, ex ornatus habemus propriae vel. At quodsi similique forensibus vim, iriure gloriatur dissentias ea mei. Eos te quod solum. Et has unum commodo fuisset. Eam at viris putent explicari.&lt;/p&gt;
+        h2 Erfindungen (chronologisch)
+        ol
+          li Magnetism Magnifier
+          li Destruct-inator
+          li Giant Robot
+          li Deflate-inator
+          li Age Accelerator-inator
+          li Slave-inator
+          li Drill-inator
+        h2 Weitere Erfindungen
+        ul
+          li Copy and Paste-Inator
+          li Melt-inator 6-5000
+          li Wood-inator
+        p Nam facer novum sonet ea, nam iriure consetetur et. Ne nulla ubique per, dicunt reprimique te mel. Omittantur efficiantur ius et, usu in habeo facer inani, docendi liberavisse instructior in mei. Qui choro ignota ei, wisi ipsum nam ne. Mollis recusabo eu his, ea hinc volutpat definiebas duo.
+        p Est in mundi tollit, nam et dicunt contentiones, ex usu audire diceret facilisis. Eum viderer corpora sadipscing ut, eu ius aeterno integre, mei ex libris perpetua comprehensam. Errem tamquam pertinax no vis, eum velit suavitate an, est populo option at. Id sea utamur regione democritum, ea utroque laboramus eam. Nostrum quaestio no has, cu pri aperiam oblique habemus. An moderatius omittantur definitiones sit.
+

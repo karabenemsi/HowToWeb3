@@ -3,13 +3,13 @@
   width: 100vw;
   position: relative;
 
-  &.past {
-    .about-content {
-      right: -300%;
-    }
-  }
+  // &.past {
+  //   .about-content {
+  //     right: -300%;
+  //   }
+  // }
 
-  &.present {
+  &.present, &.past {
     .about-image {
       left: -9vw;
     }
@@ -23,6 +23,7 @@
     height: 120vh;
     max-width: none;
     max-height: none;
+    clip-path: polygon(0% 0%, 100% 0, 55% 100%, 0% 100%);
     @include transition(all, 0.5s, cubic-bezier(0.4, 0.14, 1, 1));
   }
   .about-content {

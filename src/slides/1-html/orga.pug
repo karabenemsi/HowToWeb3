@@ -1,0 +1,36 @@
+- var notes = 'Dateinamen immer lowercase'
+section(data-notes=notes)
+  section
+    h2 Organistion
+  section
+    h3 Dateistruktur
+    p
+      pre(style="font-size:4rem;width:50%").
+         website
+         |
+        (├─ js)
+        (├─ css)
+         ├─ img
+         ├─ html
+         └─ index.html
+  section
+    h3 Konventionen
+    .subtitle "... handelt es sich bei dem Kodex eher um sogenannte Richtlinien als um Regeln"
+  section
+    h4 Tags und Attribute klein schreiben
+    pre(style="font-size:3rem")
+      code.html.background.
+        &lt;h1 href="..."&gt;Text&lt;/h1&gt;
+  section
+    h4 Element mit 2 Leerzeichen einrücken
+    pre(style="font-size:3rem")
+      code.html.background.
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;ul&gt;
+              &lt;li&gt;...&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;...&lt;/li&gt;
+        &lt;/ul&gt;
+  

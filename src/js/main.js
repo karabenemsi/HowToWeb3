@@ -73,6 +73,7 @@ Reveal.initialize({
 
 	// Factor of the display size that should remain empty around the content
 	margin: 0,
+	autoPlayMedia: true,
 
 	// Bounds for smallest/largest possible scale to apply to content
 	minScale: 1,
