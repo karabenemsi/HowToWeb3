@@ -54,7 +54,8 @@ section(data-notes=notes)
             &lt;title&gt;Preise - Doofenschmirtz Evil Inc.&lt;/title&gt;
           &lt;/head&gt;
           &lt;body&gt;
-            &lt;h1&gt;Preistabelle&lt;/h1&gt;
+          ...
+            &lt;h2&gt;Preistabelle&lt;/h2&gt;
             &lt;table&gt;
               &lt;thead&gt;
                 &lt;tr&gt;
@@ -64,19 +65,19 @@ section(data-notes=notes)
               &lt;/thead&gt;
               &lt;tbody&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;Magnetism Magnifier&lt;/td&gt;
                   &lt;td&gt;186 TAD&lt;/td&gt;
                 &lt;/tr&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;Destruct-inator&lt;/td&gt;
                   &lt;td&gt;868 TAD&lt;/td&gt;
                 &lt;/tr&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;Giant Robot&lt;/td&gt;
                   &lt;td&gt;6464 TAD&lt;/td&gt;
                 &lt;/tr&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;Data&lt;/td&gt;
+                  &lt;td&gt;Deflate-inator&lt;/td&gt;
                   &lt;td&gt;14654 TAD&lt;/td&gt;
                 &lt;/tr&gt;ö
               &lt;/tbody&gt;
@@ -84,8 +85,40 @@ section(data-notes=notes)
           &lt;/body&gt;
         &lt;/html&gt;
   section
-    +preview('file://preise.html',[{title:'Doofenschmirtz Evil Inc.', active:false},{title:'Preise - Doofenschmirtz Evil Inc.', active:true}])
-      h1 Preistabelle
+    +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:false},{title:'Preise - Doofenschmirtz Evil Inc.', active:true},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+      style.
+        body{
+          font-family: "Ebrima";
+          font-size: 16px
+        }
+      
+        h1 {
+          background: green;
+          color: white;
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-family: "Bahnschrift";
+          font-weight: 400;
+        }
+
+        p {
+          line-height: 1.5;
+          color: #232323;
+          text-align: justify;
+        }
+
+        ul {
+          list-style: square;
+        }
+      h1  Doofenshmirtz Evil Incorporated
+      nav
+        ul
+          li
+            a(tabindex="0", aria-current="page") Startseite
+          li
+            a(href="html/preise.html") Preise
+          li
+            a(href="html/bilder.html") Bilder
       table
         thead
           tr
@@ -93,15 +126,92 @@ section(data-notes=notes)
             th Preis
         tbody
           tr
-            td Data
+            td Magnetism Magnifier
             td 186 TAD
           tr
-            td Data
+            td Destruct-inator
             td 868 TAD
           tr
-            td Data
+            td Giant Robot
             td 6464 TAD
           tr
-            td Data
+            td Deflate-inator
             td 14654 TAD
+  section(data-background="#282c34").dark
+    .split
+      .left
+        h4 style.css
+        pre
+          code.css.
+            ...
+              list-style: square;
+            }
+            
+            thead {
+              font-size:1.1rem;
+            }
+            
+            th {
+              text-align: left;
+            }
+      .right
+        +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:false},{title:'Preise - Doofenschmirtz Evil Inc.', active:true},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+          style.
+            body{
+              font-family: "Ebrima";
+              font-size: 16px
+            }
+          
+            h1 {
+              background: green;
+              color: white;
+              font-size: 2rem;
+              text-transform: uppercase;
+              font-family: "Bahnschrift";
+              font-weight: 400;
+            }
 
+            p {
+              line-height: 1.5;
+              color: #232323;
+              text-align: justify;
+            }
+
+            ul {
+              list-style: square;
+            }
+
+            thead {
+              font-size:1.1rem;
+            }
+
+            th {
+              text-align: left;
+            }
+          h1  Doofenshmirtz Evil Incorporated
+          nav
+            ul
+              li
+                a(tabindex="0", aria-current="page") Startseite
+              li
+                a(href="html/preise.html") Preise
+              li
+                a(href="html/bilder.html") Bilder
+          table
+            thead
+              tr
+                th Produkt
+                th Preis
+            tbody
+              tr
+                td Magnetism Magnifier
+                td 186 TAD
+              tr
+                td Destruct-inator
+                td 868 TAD
+              tr
+                td Giant Robot
+                td 6464 TAD
+              tr
+                td Deflate-inator
+                td 14654 TAD
