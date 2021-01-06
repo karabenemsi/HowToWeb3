@@ -6,10 +6,10 @@ section(data-notes=notes)
     //- h2 Menü
     pre(style="font-size: 2rem")
       code.html.
-        &lt;img src="../img/heinz.png" height="394" width="222" alt="Heinz Doofenschmirtz" &gt;
-        &lt;img src="../img/fuchs.png"  height="533" width="800" alt="" &gt;
+        &lt;img src="https://howtoweb3.de/images/medium/115.jpg" height="394" width="222" alt="Heinz Doofenschmirtz" &gt;
+        &lt;img src="https://howtoweb3.de/images/medium/172.jpg"  height="533" width="800" alt="" &gt;
   section(data-background="#282c34").dark
-    h4 bilder.html
+    h4 index.html
     pre
       code.html.
         &lt;!doctype html&gt;
@@ -17,23 +17,332 @@ section(data-notes=notes)
           &lt;head&gt;
             &lt;meta charset="utf-8"&gt;
             &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-            &lt;title&gt;Bilder - Doofenschmirtz Evil Inc.&lt;/title&gt;
+            &lt;title&gt;Doofenschmirtz Evil Inc.&lt;/title&gt;
           &lt;/head&gt;
           &lt;body&gt;
-            &lt;h1&gt;Bilder&lt;/h1&gt;
             ...
-            &lt;img src="../img/heinz.png"  height="394" width="222" &gt;
-            &lt;img src="../img/fuchs.png"  height="533" width="800" &gt;
+            &lt;main&gt;
+            &lt;p&gt;...&lt;/p&gt;
+            &lt;img src="https://howtoweb3.de/images/medium/115.jpg"  height="394" width="222" &gt;
+            &lt;img src="https://howtoweb3.de/images/medium/172.jpg"  height="533" width="800" &gt;
+            ...
+            &lt;/main&gt;
   section
-    +preview('file://bilder.html',[{title:'Doofenschmirtz Evil Inc.', active:false},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:true}])
-      h1 Bilder
-      div
+    +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:true},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+      style.
+        * {
+          box-sizing: border-box;
+        }
+        body{
+          font-family: "Ebrima";
+          font-size: 16px;
+          background: #eee;
+          margin: 0;
+          padding: 0;
+        }
+      
+        h1 {
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-family: "Bahnschrift";
+          font-weight: 400;
+        }
+
+        p {
+          line-height: 1.5;
+          color: #232323;
+          text-align: justify;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+
+        header{
+          color: white;
+          background:
+            url(https://howtoweb3.de/images/medium/003.jpg);
+          background-size: cover;
+          background-position: center center;
+          border-bottom: 0.5rem solid #1e64e2;
+          padding: 3rem 1rem 1rem;
+          margin-bottom: 3rem;
+          height: 20rem;
+        }
+
+        header ul{
+          font-size: 1rem;
+          list-style: none;
+        }
+
+        .centered {
+          text-align: center;
+        }
+
+        main{
+          margin: 2rem auto;
+          padding: 0 2rem;
+          width: 100%;
+          max-width: 40rem;
+        }
+
+        th, td {
+          border-bottom: 0.125rem solid #232323;
+        }
+      //- header
+      //-   h1.logo Doofenshmirtz Evil Incorporated
+      //-   nav
+      //-     ul
+      //-       li
+      //-         a(href="html/preise.html") Startseite
+      //-       li
+      //-         a(href="html/preise.html") Preise
+      //-       li
+      //-         a(tabindex="0" aria-current="page") Bilder
+      main
+        p Lorem ipsum dolor sit amet, modus regione labitur te quo, at noluisse signiferumque vim, ex ornatus habemus propriae vel. At quodsi similique forensibus vim, iriure gloriatur dissentias ea mei. Eos te quod solum. Et has unum commodo fuisset. Eam at viris putent explicari.
+        <img src="https://howtoweb3.de/images/medium/115.jpg"  height="394" width="222" >
+        <img src="https://howtoweb3.de/images/medium/172.jpg"  height="533" width="800" >
+        h2 Erfindungen (chronologisch)
+        ol
+          li Magnetism Magnifier
+          li Destruct-inator
+          li Giant Robot
+          li Deflate-inator
+          li Age Accelerator-inator
+          li Slave-inator
+          li Drill-inator
+        h2 Weitere Erfindungen
         ul
-          li
-            a(href="html/preise.html") Startseite
-          li
-            a(href="html/preise.html") Preise
-          li
-            a(tabindex="0" aria-current="page") Bilder
-      img(src="./img/1/heinz.png"  height="364" width="222")
-      img(src="https://howtoweb3.de/images/medium/087.jpg"  height="533" width="800")
+          li Copy and Paste-Inator
+          li Melt-inator 6-5000
+          li Wood-inator
+        p.centered Nam facer novum sonet ea, nam iriure consetetur et. Ne nulla ubique per, dicunt reprimique te mel. Omittantur efficiantur ius et, usu in habeo facer inani, docendi liberavisse instructior in mei. Qui choro ignota ei, wisi ipsum nam ne. Mollis recusabo eu his, ea hinc volutpat definiebas duo.
+        p Est in mundi tollit, nam et dicunt contentiones, ex usu audire diceret facilisis. Eum viderer corpora sadipscing ut, eu ius aeterno integre, mei ex libris perpetua comprehensam. Errem tamquam pertinax no vis, eum velit suavitate an, est populo option at. Id sea utamur regione democritum, ea utroque laboramus eam. Nostrum quaestio no has, cu pri aperiam oblique habemus. An moderatius omittantur definitiones sit.
+  section(data-background="#282c34").dark
+    h4 index.html
+    pre
+      code.html.
+        &lt;!doctype html&gt;
+        &lt;html lang="de"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Doofenschmirtz Evil Inc.&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            ...
+            &lt;main&gt;
+            &lt;p&gt;...&lt;/p&gt;
+            &lt;img src="https://howtoweb3.de/images/medium/115.jpg" &gt;
+            &lt;img src="https://howtoweb3.de/images/medium/172.jpg" &gt;
+            ...
+            &lt;/main&gt;
+  section
+    +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:true},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+      style.
+        * {
+          box-sizing: border-box;
+        }
+        body{
+          font-family: "Ebrima";
+          font-size: 16px;
+          background: #eee;
+          margin: 0;
+          padding: 0;
+        }
+      
+        h1 {
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-family: "Bahnschrift";
+          font-weight: 400;
+        }
+
+        p {
+          line-height: 1.5;
+          color: #232323;
+          text-align: justify;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+
+        header{
+          color: white;
+          background:
+            url(https://howtoweb3.de/images/medium/003.jpg);
+          background-size: cover;
+          background-position: center center;
+          border-bottom: 0.5rem solid #1e64e2;
+          padding: 3rem 1rem 1rem;
+          margin-bottom: 3rem;
+          height: 20rem;
+        }
+
+        header ul{
+          font-size: 1rem;
+          list-style: none;
+        }
+
+        .centered {
+          text-align: center;
+        }
+
+        main{
+          margin: 2rem auto;
+          padding: 0 2rem;
+          width: 100%;
+          max-width: 40rem;
+        }
+
+        th, td {
+          border-bottom: 0.125rem solid #232323;
+        }
+      //- header
+      //-   h1.logo Doofenshmirtz Evil Incorporated
+      //-   nav
+      //-     ul
+      //-       li
+      //-         a(href="html/preise.html") Startseite
+      //-       li
+      //-         a(href="html/preise.html") Preise
+      //-       li
+      //-         a(tabindex="0" aria-current="page") Bilder
+      main
+        p Lorem ipsum dolor sit amet, modus regione labitur te quo, at noluisse signiferumque vim, ex ornatus habemus propriae vel. At quodsi similique forensibus vim, iriure gloriatur dissentias ea mei. Eos te quod solum. Et has unum commodo fuisset. Eam at viris putent explicari.
+        <img src="https://howtoweb3.de/images/medium/115.jpg">
+        <img src="https://howtoweb3.de/images/medium/172.jpg">
+        h2 Erfindungen (chronologisch)
+        ol
+          li Magnetism Magnifier
+          li Destruct-inator
+          li Giant Robot
+          li Deflate-inator
+          li Age Accelerator-inator
+          li Slave-inator
+          li Drill-inator
+        h2 Weitere Erfindungen
+        ul
+          li Copy and Paste-Inator
+          li Melt-inator 6-5000
+          li Wood-inator
+        p.centered Nam facer novum sonet ea, nam iriure consetetur et. Ne nulla ubique per, dicunt reprimique te mel. Omittantur efficiantur ius et, usu in habeo facer inani, docendi liberavisse instructior in mei. Qui choro ignota ei, wisi ipsum nam ne. Mollis recusabo eu his, ea hinc volutpat definiebas duo.
+        p Est in mundi tollit, nam et dicunt contentiones, ex usu audire diceret facilisis. Eum viderer corpora sadipscing ut, eu ius aeterno integre, mei ex libris perpetua comprehensam. Errem tamquam pertinax no vis, eum velit suavitate an, est populo option at. Id sea utamur regione democritum, ea utroque laboramus eam. Nostrum quaestio no has, cu pri aperiam oblique habemus. An moderatius omittantur definitiones sit.
+
+
+  section(data-background="#282c34").dark
+    .split
+      .left
+        h4 style.css
+        pre
+          code.css.
+            img {
+              width:100%;
+              margin: 1rem 0; 
+              max-height: 15rem;
+              object-fit: cover;
+            }
+      .right
+        +preview('file://index.html',[{title:'Doofenschmirtz Evil Inc.', active:true},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:false}])
+          style.
+            * {
+              box-sizing: border-box;
+            }
+            body{
+              font-family: "Ebrima";
+              font-size: 16px;
+              background: #eee;
+              margin: 0;
+              padding: 0;
+            }
+          
+            h1 {
+              font-size: 2rem;
+              text-transform: uppercase;
+              font-family: "Bahnschrift";
+              font-weight: 400;
+            }
+
+            p {
+              line-height: 1.5;
+              color: #232323;
+              text-align: justify;
+            }
+
+            ul {
+              list-style: none;
+            }
+
+
+            header{
+              color: white;
+              background:
+                url(https://howtoweb3.de/images/medium/003.jpg);
+              background-size: cover;
+              background-position: center center;
+              border-bottom: 0.5rem solid #1e64e2;
+              padding: 3rem 1rem 1rem;
+              margin-bottom: 3rem;
+              height: 20rem;
+            }
+
+            header ul{
+              font-size: 1rem;
+              list-style: none;
+            }
+
+            .centered {
+              text-align: center;
+            }
+
+            main{
+              margin: 2rem auto;
+              padding: 0 2rem;
+              width: 100%;
+              max-width: 40rem;
+            }
+
+            th, td {
+              border-bottom: 0.125rem solid #232323;
+            }
+
+            img {
+              width:100%;
+              margin: 1rem 0; 
+              max-height: 15rem;
+              object-fit: cover;
+            }
+          //- header
+          //-   h1.logo Doofenshmirtz Evil Incorporated
+          //-   nav
+          //-     ul
+          //-       li
+          //-         a(href="html/preise.html") Startseite
+          //-       li
+          //-         a(href="html/preise.html") Preise
+          //-       li
+          //-         a(tabindex="0" aria-current="page") Bilder
+          main
+            p Lorem ipsum dolor sit amet, modus regione labitur te quo, at noluisse signiferumque vim, ex ornatus habemus propriae vel. At quodsi similique forensibus vim, iriure gloriatur dissentias ea mei. Eos te quod solum. Et has unum commodo fuisset. Eam at viris putent explicari.
+            <img src="https://howtoweb3.de/images/medium/115.jpg">
+            <img src="https://howtoweb3.de/images/medium/172.jpg">
+            h2 Erfindungen (chronologisch)
+            ol
+              li Magnetism Magnifier
+              li Destruct-inator
+              li Giant Robot
+              li Deflate-inator
+              li Age Accelerator-inator
+              li Slave-inator
+              li Drill-inator
+            h2 Weitere Erfindungen
+            ul
+              li Copy and Paste-Inator
+              li Melt-inator 6-5000
+              li Wood-inator
+            p.centered Nam facer novum sonet ea, nam iriure consetetur et. Ne nulla ubique per, dicunt reprimique te mel. Omittantur efficiantur ius et, usu in habeo facer inani, docendi liberavisse instructior in mei. Qui choro ignota ei, wisi ipsum nam ne. Mollis recusabo eu his, ea hinc volutpat definiebas duo.
+            p Est in mundi tollit, nam et dicunt contentiones, ex usu audire diceret facilisis. Eum viderer corpora sadipscing ut, eu ius aeterno integre, mei ex libris perpetua comprehensam. Errem tamquam pertinax no vis, eum velit suavitate an, est populo option at. Id sea utamur regione democritum, ea utroque laboramus eam. Nostrum quaestio no has, cu pri aperiam oblique habemus. An moderatius omittantur definitiones sit.
