@@ -108,7 +108,7 @@
     .window, iframe {
       width: 100%;
       // max-height: 80vh;
-      height: 80vh;
+      height: calc(80vh - 4.5rem);
       overflow: hidden;
       position: relative;
       border: none;

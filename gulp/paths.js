@@ -24,6 +24,7 @@ module.exports = {
   },
 
   dist: {
+    root: './dist/',
     html: './dist/',
     js: 'dist/js',
     css: 'dist/css',
@@ -32,6 +33,6 @@ module.exports = {
   },
 
   deploy: {
-    pages: 'dist/**/*'
+    pages: './docs/'
   }
 };

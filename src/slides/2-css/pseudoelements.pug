@@ -27,3 +27,285 @@ section
         }
     .pelementsdemo
         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque consequuntur quisquam quia ea est quae blanditiis dolor sunt sed exercitationem accusamus itaque explicabo provident ipsam doloribus dolore, minus hic.
+  section
+    +preview('file://bilder.html',[{title:'Doofenschmirtz Evil Inc.', active:false},{title:'Preise - Doofenschmirtz Evil Inc.', active:false},{title:'Bilder - Doofenschmirtz Evil Inc.', active:true}])
+      style.
+        * {
+          box-sizing: border-box;
+        }
+        body{
+          font-family: "Ebrima";
+          font-size: 16px;
+          background: #eee;
+          margin: 0;
+          padding: 0;
+          min-height: 100vh;
+        }
+      
+        h1 {
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-family: "Bahnschrift";
+          font-weight: 400;
+        }
+
+        p {
+          line-height: 1.5;
+          color: #232323;
+          text-align: justify;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+
+        header{
+          color: white;
+          background:
+            url(https://howtoweb3.de/images/medium/003.jpg);
+          background-size: cover;
+          background-position: center center;
+          border-bottom: 0.5rem solid #1e64e2;
+          padding: 0 1rem 1rem;
+          margin-bottom: 3rem;
+          height: 20rem;
+          box-shadow: 0 0 1rem rgba(0,0,0,0.8);
+          position: relative
+        }
+
+        nav {
+          position: sticky;
+          top: 0;
+        }
+
+        nav ul{
+          font-size: 1rem;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          text-align: right;
+        }
+
+        .centered {
+          text-align: center;
+        }
+
+        main{
+          margin: 2rem auto;
+          padding: 0 2rem;
+          width: 100%;
+          max-width: 40rem;
+        }
+
+        th, td {
+          border-bottom: 0.125rem solid #232323;
+        }
+
+        img {
+          width:100%;
+          margin: 1rem 0; 
+          max-height: 15rem;
+          object-fit: cover;
+          box-shadow: 0 0 1rem rgba(0,0,0,0.6);
+          border-radius: 1rem;
+        }
+
+        nav li {
+          display:inline-block;
+        }
+        nav li a{
+          display: block;
+          padding: 1rem;
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .logo{
+          position: absolute;
+          bottom:0;
+        }
+
+        footer {
+          background: #333;
+          width: 100%;
+        }
+
+        .footer-content {
+          margin: 0 auto;
+          width: 100%;
+          max-width: 40rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .footer-content p{
+          margin: 1rem;
+          color: #fff;
+          line-height: 1;
+          text-align: center;
+        }
+
+        .gallery {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .gallery img {
+          margin: 1rem;
+          width: 15rem;
+          flex-grow:1;
+        }
+
+        blockquote {
+          margin: 0;
+          padding: 0.5rem 0 0.5rem 2.5rem;
+          position: relative;
+          min-height: 2rem;
+        }
+
+        blockquote::before{
+          content: '“';
+          font-size: 4rem;
+          font-family: 'Georgia', serif;
+          color: rgba(0,0,0,0.6);
+          position: absolute;
+          top: 0;
+          left:0;
+        }
+
+        blockquote cite{
+          display: block;
+
+
+        }
+        blockquote cite::before{
+          content: '-';
+          display:inline-block;
+          margin: 0 0.5rem 0 0;
+        }
+      header
+        nav
+          ul
+            li
+              a(tabindex="0" aria-current="page") Startseite
+            li
+              a(href="html/preise.html") Preise
+            li
+              a(href="html/bilder.html") Bilder
+        h1.logo Doofenshmirtz Evil Incorporated
+      main
+        h2 Bildergalerie
+        //- div(style="height:100rem;")
+        blockquote
+          | Once upon a time i was falling in love, but now i'm only falling apart
+          cite Die Europäische Union
+        blockquote
+          | We are anonoymous. We are legion. We don not forgive. We do no forget. Expect us.
+          cite Das Finanzamt
+        blockquote
+          | Liebe deinen Nächsten wie dich selbst.
+          cite Kurt Cobain
+        blockquote
+          | Guten Freunden gibt man ein Küsschen
+          cite Judas
+        blockquote
+          | Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetz werde.
+          cite Silvio Berlusconi
+        blockquote
+          | Von Mensch zu Mensch
+          cite Heckler und Koch
+        blockquote
+          | Wenn man ein 0:2 kassiert, dann ist ein 1:1 nicht mehr möglich
+          cite Satz des Pythagoras
+        .gallery
+          img(src="https://howtoweb3.de/images/small/002.jpg")
+          img(src="https://howtoweb3.de/images/small/388.jpg")
+          img(src="https://howtoweb3.de/images/small/341.jpg")
+          img(src="https://howtoweb3.de/images/small/325.jpg")
+          img(src="https://howtoweb3.de/images/small/261.jpg")
+          img(src="https://howtoweb3.de/images/small/232.jpg")
+          img(src="https://howtoweb3.de/images/small/221.jpg")
+          img(src="https://howtoweb3.de/images/small/204.jpg")
+      footer
+        .footer-content
+          p &copy; 2021
+          p Doofenschmirtz Evil Incorporated
+          p Site build by Norm
+  section(data-background="#282c34").dark
+    .split
+      .left
+        h4 index.html
+        pre
+          code.html.
+            &lt;html&gt;
+              ...
+              &lt;body&gt;
+                &lt;main&gt;
+                  ...
+                  &lt;blockquote&gt;
+                  Von Mensch zu Mensch
+                  &lt;cite&gt;Heckler und Koch&lt;/cite&gt;
+                  &lt;/blockquote&gt; 
+                  ...
+                &lt;/main&gt;
+                &lt;footer&gt;...&lt;/footer&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+            
+      .right
+        h4 style.css
+        pre
+          code.css.
+            blockquote {
+              margin: 0;
+              padding: 0.5rem 0 0.5rem 2.5rem;
+              position: relative;
+              min-height: 2rem;
+            }
+
+            blockquote::before{
+              content: '“';
+              font-size: 4rem;
+              font-family: 'Georgia', serif;
+              color: rgba(0,0,0,0.6);
+              position: absolute;
+              top: 0;
+              left:0;
+            }
+  section(data-background="#282c34").dark
+    .split
+      .left
+        h4 index.html
+        pre
+          code.html.
+            &lt;html&gt;
+              ...
+              &lt;body&gt;
+                &lt;main&gt;
+                  ...
+                  &lt;blockquote&gt;
+                  Von Mensch zu Mensch
+                  &lt;cite&gt;Heckler und Koch&lt;/cite&gt;
+                  &lt;/blockquote&gt; 
+                  ...
+                &lt;/main&gt;
+                &lt;footer&gt;...&lt;/footer&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+            
+      .right
+        h4 style.css
+        pre
+          code.css.
+            blockquote cite{
+              display: block;
+
+
+            }
+            blockquote cite::before{
+              content: '-';
+              display:inline-block;
+              margin: 0 0.5rem 0 0;
+            }
